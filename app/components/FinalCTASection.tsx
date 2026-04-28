@@ -21,7 +21,7 @@ export default function FinalCTASection() {
       body: JSON.stringify({ name, phone, email }),
     }).catch(() => {});
 
-    const msg = encodeURIComponent(`היי שנהב! קוראים לי ${name}, מספרי ${phone}. אני רוצה לבדוק אם התהליך מתאים לי`);
+    const msg = encodeURIComponent(`היי שנהב! קוראים לי ${name}. אני רוצה לבדוק אם התהליך מתאים לי`);
     window.open(`https://wa.me/972506409478?text=${msg}`, '_blank');
     setSubmitting(false);
   };

@@ -92,7 +92,7 @@ export default function AboutSection() {
             src="/images/about.jpg"
             alt="שנהב בנימין"
             fill
-            style={{ objectFit: 'cover', objectPosition: 'top center' }}
+            style={{ objectFit: 'cover', objectPosition: 'center 15%' }}
           />
         </motion.div>
 
