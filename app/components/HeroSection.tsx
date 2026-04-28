@@ -269,6 +269,9 @@ export default function HeroSection() {
             max-height: 320px;
             overflow: hidden;
           }
+          .hero-layout {
+            padding-top: max(100px, calc(env(safe-area-inset-top, 0px) + 80px)) !important;
+          }
         }
       `}</style>
     </section>
