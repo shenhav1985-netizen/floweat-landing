@@ -147,45 +147,6 @@ export default function TestimonialsSection() {
           style={{ marginBottom: 44 }}
         />
 
-        {/* WhatsApp bubbles — no header */}
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-60px' }}
-          transition={{ duration: 0.7, delay: 0.3 }}
-          style={{
-            borderRadius: 20,
-            overflow: 'hidden',
-            border: '1px solid rgba(255,255,255,0.07)',
-            boxShadow: '0 16px 48px rgba(0,0,0,0.5)',
-            marginBottom: 56,
-            background: '#0D0906',
-            padding: '20px 16px',
-            display: 'flex',
-            flexDirection: 'column',
-            gap: 12,
-          }}
-        >
-          {bubbles.map((b, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, x: -16 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.07 + 0.35 }}
-              style={{ display: 'flex', justifyContent: 'flex-end' }}
-            >
-              <div style={{ maxWidth: '85%', textAlign: 'right' }}>
-                <p style={{ fontSize: 11, color: 'var(--copper-light)', marginBottom: 3, paddingRight: 4 }}>{b.name}</p>
-                <div className="wa-bubble">
-                  <p style={{ direction: 'rtl' }}><BubbleText segments={b.segments} /></p>
-                  <div className="time">{b.time} ✓✓</div>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
-
         {/* Proof images masonry */}
         <motion.div
           initial={{ opacity: 0 }}
