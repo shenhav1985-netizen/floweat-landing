@@ -44,15 +44,32 @@ export default function PainSection() {
           את לא לבד בזה
         </motion.p>
 
+        {/* Body — appears first per copy order */}
+        <motion.p {...fadeUp(0.1)} style={{
+          fontSize: 'clamp(1rem, 2.2vw, 1.15rem)',
+          color: 'var(--text-medium)',
+          lineHeight: 1.85,
+          marginBottom: 28,
+        }}>
+          לא עוד תהליך שמתחיל בהתלהבות ונגמר בעייפות.
+          <br />
+          לא עוד ליווי שדורש ממך להיות{' '}
+          <strong style={{ color: 'var(--text-brown)' }}>"חזקה"</strong>,{' '}
+          <strong style={{ color: 'var(--text-brown)' }}>"ממושמעת"</strong>
+          {' '}או{' '}
+          <strong style={{ color: 'var(--text-brown)' }}>"יותר בעניין"</strong>
+          {' '}ולא עוד הבטחה לשינוי חיצוני שמתרסק על החיים האמיתיים שלך באמצע שבוע עמוס.
+        </motion.p>
+
         {/* Main headline */}
-        <motion.h2 {...fadeUp(0.1)} style={{
+        <motion.h2 {...fadeUp(0.22)} style={{
           fontSize: 'clamp(1.9rem, 5vw, 3rem)',
           fontWeight: 900,
           color: 'var(--text-dark)',
           lineHeight: 1.25,
-          marginBottom: 24,
+          marginBottom: 20,
         }}>
-          הגיע הזמן לנצח את דפוסי האכילה —
+          הגיע הזמן לנצח את דפוסי האכילה
           <br />
           <span style={{ color: 'var(--copper)' }}>ולבנות הרגלים חדשים מהשורש</span>
         </motion.h2>
@@ -62,27 +79,10 @@ export default function PainSection() {
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
           className="copper-divider"
-          style={{ marginBottom: 28 }}
+          style={{ marginBottom: 24 }}
         />
-
-        {/* Body */}
-        <motion.p {...fadeUp(0.3)} style={{
-          fontSize: 'clamp(1rem, 2.2vw, 1.15rem)',
-          color: 'var(--text-medium)',
-          lineHeight: 1.85,
-          marginBottom: 20,
-        }}>
-          לא עוד תהליך שמתחיל בהתלהבות ונגמר בעייפות.
-          <br />
-          לא עוד ליווי שדורש ממך להיות{' '}
-          <strong style={{ color: 'var(--text-brown)' }}>"חזקה"</strong>,{' '}
-          <strong style={{ color: 'var(--text-brown)' }}>"ממושמעת"</strong>
-          {' '}או{' '}
-          <strong style={{ color: 'var(--text-brown)' }}>"יותר בעניין"</strong>
-          {' '}— ולא עוד הבטחה לשינוי חיצוני שמתרסק על החיים האמיתיים שלך באמצע שבוע עמוס.
-        </motion.p>
 
         <motion.p {...fadeUp(0.42)} style={{
           fontSize: 'clamp(1rem, 2.2vw, 1.15rem)',
