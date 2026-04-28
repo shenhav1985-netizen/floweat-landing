@@ -78,8 +78,8 @@ export default function AboutSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.25 }}
           style={{
-            width: 'min(220px, 60vw)',
-            height: 'min(220px, 60vw)',
+            width: 'min(180px, 46vw)',
+            height: 'min(180px, 46vw)',
             borderRadius: '50%',
             overflow: 'hidden',
             border: '4px solid rgba(196,112,74,0.4)',
@@ -92,7 +92,7 @@ export default function AboutSection() {
             src="/images/about.jpg"
             alt="שנהב בנימין"
             fill
-            style={{ objectFit: 'cover', objectPosition: 'center 15%' }}
+            style={{ objectFit: 'cover', objectPosition: '50% 0%' }}
           />
         </motion.div>
 

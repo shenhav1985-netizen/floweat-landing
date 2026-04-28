@@ -75,7 +75,7 @@ export default function HeroSection() {
               display: 'block',
               fontFamily: 'Heebo, sans-serif',
               fontWeight: 900,
-              fontSize: 'clamp(3rem, 12vw, 6.5rem)',
+              fontSize: 'clamp(2.2rem, 9vw, 6.5rem)',
               letterSpacing: '0.12em',
               lineHeight: 1,
               background: 'linear-gradient(135deg, #E8B89A 0%, #C4704A 35%, #D98B65 65%, #E8C4A8 100%)',
