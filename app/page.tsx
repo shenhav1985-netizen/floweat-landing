@@ -25,7 +25,7 @@ export default function Home() {
       <MechanismSection />
       <BonusesSection />
       <TestimonialsSection />
-      {/* <VideoSection /> */}
+      <VideoSection />
       <AboutSection />
       <NotForSection />
       <FinalCTASection />
