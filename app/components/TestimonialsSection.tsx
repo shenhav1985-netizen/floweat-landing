@@ -114,7 +114,7 @@ const proofImages = [
 export default function TestimonialsSection() {
   return (
     <section style={{ background: '#1C1008', padding: '96px 24px' }}>
-      <div style={{ maxWidth: 780, margin: '0 auto', textAlign: 'center' }}>
+      <div style={{ maxWidth: 900, margin: '0 auto', textAlign: 'center' }}>
 
         {/* Eyebrow */}
         <motion.p
@@ -160,123 +160,58 @@ export default function TestimonialsSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="copper-divider"
-          style={{ marginBottom: 44 }}
+          style={{ marginBottom: 48 }}
         />
 
-        {/* WhatsApp chat */}
+        {/* Masonry proof images */}
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-60px' }}
-          transition={{ duration: 0.7, delay: 0.3 }}
-          style={{
-            borderRadius: 20,
-            overflow: 'hidden',
-            border: '1px solid rgba(255,255,255,0.07)',
-            boxShadow: '0 16px 48px rgba(0,0,0,0.5)',
-            marginBottom: 56,
-          }}
-        >
-          {/* WA header */}
-          <div style={{
-            background: '#128C7E',
-            display: 'flex',
-            alignItems: 'center',
-            gap: 12,
-            padding: '12px 18px',
-          }}>
-            <div style={{
-              width: 36,
-              height: 36,
-              borderRadius: '50%',
-              background: 'var(--copper)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontWeight: 700,
-              color: '#FFF',
-              fontSize: 15,
-              flexShrink: 0,
-            }}>ש</div>
-            <div style={{ textAlign: 'right' }}>
-              <p style={{ color: '#FFF', fontWeight: 700, fontSize: 14, lineHeight: 1.2 }}>שנהב בנימין | floweat</p>
-              <p style={{ color: '#A8D5B8', fontSize: 12 }}>קבוצת הליווי</p>
-            </div>
-          </div>
-
-          {/* Bubbles */}
-          <div style={{ background: '#0D0906', padding: '16px', display: 'flex', flexDirection: 'column', gap: 12 }}>
-            {bubbles.map((b, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, x: -16 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: i * 0.07 + 0.35 }}
-                style={{ display: 'flex', justifyContent: 'flex-end' }}
-              >
-                <div style={{ maxWidth: '85%', textAlign: 'right' }}>
-                  <p style={{ fontSize: 11, color: 'var(--copper-light)', marginBottom: 3, paddingRight: 4 }}>{b.name}</p>
-                  <div className="wa-bubble">
-                    <p style={{ direction: 'rtl' }}><BubbleText segments={b.segments} /></p>
-                    <div className="time">{b.time} ✓✓</div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Social proof heading */}
-        <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.6, delay: 0.3 }}
           style={{
-            fontSize: 12,
-            fontWeight: 600,
-            letterSpacing: '0.28em',
-            textTransform: 'uppercase',
-            color: 'var(--copper-light)',
-            marginBottom: 24,
+            columns: '3 180px',
+            columnGap: 14,
           }}
         >
-          הוכחות מהשטח
-        </motion.p>
-
-        {/* Social proof images grid */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
-          gap: 12,
-        }}>
           {proofImages.map((src, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, margin: '-40px' }}
-              transition={{ duration: 0.5, delay: i * 0.05 + 0.2 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-30px' }}
+              transition={{ duration: 0.5, delay: i * 0.06 + 0.2 }}
+              whileHover={{ scale: 1.02, zIndex: 2 }}
               style={{
-                borderRadius: 12,
+                breakInside: 'avoid',
+                marginBottom: 14,
+                borderRadius: 14,
                 overflow: 'hidden',
-                border: '1px solid rgba(196,112,74,0.2)',
-                boxShadow: '0 4px 16px rgba(0,0,0,0.3)',
+                border: '1px solid rgba(196,112,74,0.25)',
+                boxShadow: '0 4px 20px rgba(0,0,0,0.4)',
                 background: '#111',
+                position: 'relative',
+                cursor: 'pointer',
               }}
             >
               <Image
                 src={src}
                 alt={`הוכחה חברתית ${i + 1}`}
-                width={300}
-                height={300}
+                width={400}
+                height={400}
                 style={{ width: '100%', height: 'auto', display: 'block' }}
                 unoptimized
               />
+              {/* Subtle copper glow on hover */}
+              <div style={{
+                position: 'absolute',
+                inset: 0,
+                background: 'linear-gradient(135deg, rgba(196,112,74,0.06) 0%, transparent 60%)',
+                pointerEvents: 'none',
+              }} />
             </motion.div>
           ))}
-        </div>
+        </motion.div>
 
       </div>
     </section>
