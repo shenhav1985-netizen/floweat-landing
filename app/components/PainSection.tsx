@@ -77,10 +77,10 @@ export default function PainSection() {
           לא עוד תהליך שמתחיל בהתלהבות ונגמר בעייפות.
           <br />
           לא עוד ליווי שדורש ממך להיות{' '}
-          <strong style={{ color: 'var(--text-brown)', textDecoration: 'underline', textDecorationColor: '#E53E3E', textDecorationThickness: '2px', textUnderlineOffset: '3px' }}>"חזקה"</strong>,{' '}
-          <strong style={{ color: 'var(--text-brown)', textDecoration: 'underline', textDecorationColor: '#E53E3E', textDecorationThickness: '2px', textUnderlineOffset: '3px' }}>"ממושמעת"</strong>
+          <strong style={{ color: 'var(--text-brown)' }}>"חזקה"</strong>,{' '}
+          <strong style={{ color: 'var(--text-brown)' }}>"ממושמעת"</strong>
           {' '}או{' '}
-          <strong style={{ color: 'var(--text-brown)', textDecoration: 'underline', textDecorationColor: '#E53E3E', textDecorationThickness: '2px', textUnderlineOffset: '3px' }}>"יותר בעניין"</strong>
+          <strong style={{ color: 'var(--text-brown)' }}>"יותר בעניין"</strong>
           {' '}— ולא עוד הבטחה לשינוי חיצוני שמתרסק על החיים האמיתיים שלך באמצע שבוע עמוס.
         </motion.p>
 
@@ -92,8 +92,7 @@ export default function PainSection() {
         }}>
           שעובדים בשבילך גם כשאין לך כוח, זמן או חשק.
           <br />
-          תהליך אחד מדויק שמחזיק{' '}
-          <span style={{ textDecoration: 'underline', textDecorationColor: '#E53E3E', textDecorationThickness: '2px', textUnderlineOffset: '3px', fontWeight: 700 }}>שגרה, נראות חיצונית ואורח חיים לאורך זמן</span>.
+          תהליך אחד מדויק שמחזיק שגרה, נראות חיצונית ואורח חיים לאורך זמן.
         </motion.p>
 
       </div>

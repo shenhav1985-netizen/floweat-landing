@@ -19,11 +19,11 @@ const bubbles: { segments: Segment[]; time: string; name: string }[] = [
   {
     time: '8:54', name: 'רחל',
     segments: [
-      { text: 'בוקר טוב היה סוף"ש מעולה אני מרגישה ' },
+      { text: 'בוקר טוב! היה סוף"ש מעולה, אני מרגישה ' },
       { text: 'מאוזנת', highlight: true },
-      { text: ' אין כבדות. יש לי עניין שמטרגר אותי בסופי שבוע תמיד ואני מרגישה שאני ' },
+      { text: ', אין כבדות. יש לי עניין שמטרגר אותי בסופי שבוע תמיד ואני מרגישה שאני ' },
       { text: 'מתגברת עליו', highlight: true },
-      { text: ' וזה מטורף' },
+      { text: ' וזה מטורף 🙏' },
     ],
   },
   {
@@ -31,26 +31,18 @@ const bubbles: { segments: Segment[]; time: string; name: string }[] = [
     segments: [
       { text: 'את פשוט ' },
       { text: 'ההצלה שלי בחיים', highlight: true },
-      { text: ' 💗 אף פעם לא עשיתי עבודה כזו על המשקל תמיד היה זה תפריט ותהליך ' },
+      { text: ' 💗 אף פעם לא עשיתי עבודה כזו על המשקל, תמיד היה זה תפריט ותהליך. ' },
       { text: 'שמחה שאני איתך בליווי', highlight: true },
     ],
   },
   {
     time: '8:43', name: 'דנה',
     segments: [
-      { text: 'מרגישה מעולה ואפילו יותר מזה כולם מסביבי מתוסכלות על המשקל ואני ' },
+      { text: 'מרגישה מעולה ואפילו יותר מזה, כולם מסביבי מתוסכלות על המשקל ואני ' },
       { text: 'ממשיכה לרדת', highlight: true },
       { text: ' ומאד ' },
       { text: 'ממוקדת', highlight: true },
-      { text: ' איך אומרת בלי דרמה 😊' },
-    ],
-  },
-  {
-    time: '10:01', name: 'נועה',
-    segments: [
-      { text: 'את גורמת לי ' },
-      { text: 'להסתכל על התמונה הגדולה', highlight: true },
-      { text: ' מאשר על השטויות שאני מתעסקת בהם. אני אוהבת אותך ואת התהליך הזה 🙏' },
+      { text: '. איך אומרים — בלי דרמה 😊' },
     ],
   },
   {
@@ -71,6 +63,14 @@ const bubbles: { segments: Segment[]; time: string; name: string }[] = [
       { text: ' שאני יודעת עכשיו לזהות ו' },
       { text: 'לנטרל אותו', highlight: true },
       { text: '. תודה רבה ❤️' },
+    ],
+  },
+  {
+    time: '10:01', name: 'נועה',
+    segments: [
+      { text: 'את גורמת לי ' },
+      { text: 'להסתכל על התמונה הגדולה', highlight: true },
+      { text: ' ולא על השטויות שהייתי תקועה בהן. אני אוהבת אותך ואת התהליך הזה 🙏' },
     ],
   },
 ];
@@ -116,63 +116,83 @@ export default function TestimonialsSection() {
     <section style={{ background: '#1C1008', padding: '96px 24px' }}>
       <div style={{ maxWidth: 900, margin: '0 auto', textAlign: 'center' }}>
 
-        {/* Eyebrow */}
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.6 }}
-          style={{
-            fontSize: 12,
-            fontWeight: 600,
-            letterSpacing: '0.28em',
-            textTransform: 'uppercase',
-            color: 'var(--copper-light)',
-            marginBottom: 16,
-          }}
+          style={{ fontSize: 12, fontWeight: 600, letterSpacing: '0.28em', textTransform: 'uppercase', color: 'var(--copper-light)', marginBottom: 16 }}
         >
           אפשר לראות את התוצאות בלייב
         </motion.p>
 
-        {/* Headline */}
         <motion.h2
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          style={{
-            fontSize: 'clamp(1.8rem, 4.5vw, 2.8rem)',
-            fontWeight: 900,
-            color: '#F5EDE4',
-            lineHeight: 1.25,
-            marginBottom: 20,
-          }}
+          style={{ fontSize: 'clamp(1.8rem, 4.5vw, 2.8rem)', fontWeight: 900, color: '#F5EDE4', lineHeight: 1.25, marginBottom: 20 }}
         >
           מה אומרות הנשים
           <br />
           <span style={{ color: 'var(--copper-light)' }}>שכבר עברו את התהליך</span>
         </motion.h2>
 
-        {/* Divider */}
         <motion.div
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="copper-divider"
-          style={{ marginBottom: 48 }}
+          style={{ marginBottom: 44 }}
         />
 
-        {/* Masonry proof images */}
+        {/* WhatsApp bubbles — no header */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.7, delay: 0.3 }}
+          style={{
+            borderRadius: 20,
+            overflow: 'hidden',
+            border: '1px solid rgba(255,255,255,0.07)',
+            boxShadow: '0 16px 48px rgba(0,0,0,0.5)',
+            marginBottom: 56,
+            background: '#0D0906',
+            padding: '20px 16px',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 12,
+          }}
+        >
+          {bubbles.map((b, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, x: -16 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: i * 0.07 + 0.35 }}
+              style={{ display: 'flex', justifyContent: 'flex-end' }}
+            >
+              <div style={{ maxWidth: '85%', textAlign: 'right' }}>
+                <p style={{ fontSize: 11, color: 'var(--copper-light)', marginBottom: 3, paddingRight: 4 }}>{b.name}</p>
+                <div className="wa-bubble">
+                  <p style={{ direction: 'rtl' }}><BubbleText segments={b.segments} /></p>
+                  <div className="time">{b.time} ✓✓</div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* Proof images masonry */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          style={{
-            columns: '3 180px',
-            columnGap: 14,
-          }}
+          style={{ columns: '3 180px', columnGap: 14 }}
         >
           {proofImages.map((src, i) => (
             <motion.div
@@ -202,13 +222,6 @@ export default function TestimonialsSection() {
                 style={{ width: '100%', height: 'auto', display: 'block' }}
                 unoptimized
               />
-              {/* Subtle copper glow on hover */}
-              <div style={{
-                position: 'absolute',
-                inset: 0,
-                background: 'linear-gradient(135deg, rgba(196,112,74,0.06) 0%, transparent 60%)',
-                pointerEvents: 'none',
-              }} />
             </motion.div>
           ))}
         </motion.div>
