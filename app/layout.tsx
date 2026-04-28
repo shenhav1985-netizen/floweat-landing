@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Cormorant_Garamond } from 'next/font/google';
+import { Cormorant_Garamond, Bebas_Neue } from 'next/font/google';
 import './globals.css';
 
 const cormorant = Cormorant_Garamond({
@@ -7,6 +7,13 @@ const cormorant = Cormorant_Garamond({
   weight: ['400', '600', '700'],
   style: ['normal', 'italic'],
   variable: '--font-cormorant',
+  display: 'swap',
+});
+
+const bebasNeue = Bebas_Neue({
+  subsets: ['latin'],
+  weight: ['400'],
+  variable: '--font-bebas',
   display: 'swap',
 });
 
@@ -29,7 +36,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="he" dir="rtl" className={cormorant.variable}>
+    <html lang="he" dir="rtl" className={`${cormorant.variable} ${bebasNeue.variable}`}>
       <body>{children}</body>
     </html>
   );
