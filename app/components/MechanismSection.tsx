@@ -1,31 +1,41 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import type { ReactNode } from 'react';
 
-const steps = [
+const hl: React.CSSProperties = {
+  textDecoration: 'underline',
+  textDecorationColor: '#E53E3E',
+  textDecorationThickness: '2px',
+  textUnderlineOffset: '3px',
+  fontWeight: 700,
+  color: 'inherit',
+};
+
+const steps: { title: string; body: ReactNode; badge: string }[] = [
   {
     title: 'מכבות את הרעש בראש',
-    body: 'מפרידות בין "מי שאת" לבין "הקול הרעב" שמנהל אותך — כך שהדיאלוג הפנימי המתיש נפסק ואת חוזרת לשמוע את עצמך.',
+    body: <span>מפרידות בין &ldquo;מי שאת&rdquo; לבין <span style={hl}>&ldquo;הקול הרעב&rdquo;</span> שמנהל אותך, כך שהדיאלוג הפנימי המתיש נפסק ואת חוזרת לשמוע את עצמך.</span>,
     badge: '0% מאבק, 100% שקט',
   },
   {
     title: 'נטרול הטריגרים הרגשיים',
-    body: 'נמפה את "הכפתורים" שמפעילים אצלך אכילה (עייפות, עצבים, בדידות) ומנתקות את החיווט האוטומטי ששולח אותך למקרר.',
+    body: <span>נמפה את &ldquo;הכפתורים&rdquo; שמפעילים אצלך אכילה (עייפות, עצבים, בדידות) ומנתקות את <span style={hl}>החיווט האוטומטי</span> ששולח אותך למקרר.</span>,
     badge: 'שליטה מלאה ללא כוח רצון',
   },
   {
     title: 'להעיר את המנכ״לית שבפנים',
-    body: 'נעביר את המושכות מהדחפים והרגשות לשכל ולשיקול הדעת — ונבנה אצלך סמכות פנימית שיודעת לקבל החלטות גם מול הפיתוי הכי גדול.',
+    body: <span>נעביר את המושכות <span style={hl}>מהדחפים והרגשות לשכל ולשיקול הדעת</span>, ונבנה אצלך סמכות פנימית שיודעת לקבל החלטות גם מול הפיתוי הכי גדול.</span>,
     badge: 'ביטחון עצמי בלתי שביר',
   },
   {
     title: 'לצרוב זהות חדשה של אישה חופשייה',
-    body: 'נעשה מעבר מנטלי מאישה ש"נלחמת במשקל" לאישה ש"המשקל לא מעסיק אותה" — דרך שינויי דפוסי חשיבה עמוקים.',
+    body: <span>מעבר מנטלי מאישה ש<span style={hl}>&ldquo;נלחמת במשקל&rdquo;</span> לאישה ש<span style={hl}>&ldquo;המשקל לא מעסיק אותה&rdquo;</span>, דרך שינויי דפוסי חשיבה עמוקים.</span>,
     badge: 'שינוי שלא דורש תחזוקה מתישה',
   },
   {
     title: 'בניית שגרת חיים חסינה',
-    body: 'תטמיעי הרגלים גמישים שעובדים בשבילך גם בימים הכי לחוצים, בחופשות ובמשברים — כדי שלא תצטרכי להיות "מושלמת" בשביל לראות תוצאות.',
+    body: <span>תטמיעי <span style={hl}>הרגלים גמישים שעובדים בשבילך</span> גם בימים הכי לחוצים, בחופשות ובמשברים, כדי שלא תצטרכי להיות &ldquo;מושלמת&rdquo; בשביל לראות תוצאות.</span>,
     badge: 'יציבות בכל סיטואציה',
   },
 ];
@@ -35,7 +45,6 @@ export default function MechanismSection() {
     <section style={{ background: '#1C1008', padding: '96px 24px' }}>
       <div style={{ maxWidth: 700, margin: '0 auto', textAlign: 'center' }}>
 
-        {/* Eyebrow */}
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -53,7 +62,6 @@ export default function MechanismSection() {
           איך זה עובד
         </motion.p>
 
-        {/* Headline */}
         <motion.h2
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -82,7 +90,6 @@ export default function MechanismSection() {
           ב-10 שבועות אנחנו מתקינות לך מערכת הפעלה חדשה.
         </motion.p>
 
-        {/* Divider */}
         <motion.div
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
@@ -92,7 +99,6 @@ export default function MechanismSection() {
           style={{ marginBottom: 44 }}
         />
 
-        {/* Steps */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: 16, textAlign: 'right' }}>
           {steps.map((step, i) => (
             <motion.div
@@ -109,7 +115,6 @@ export default function MechanismSection() {
                 position: 'relative',
               }}
             >
-              {/* Step number */}
               <div style={{
                 position: 'absolute',
                 top: 18,
@@ -161,7 +166,6 @@ export default function MechanismSection() {
           ))}
         </div>
 
-        {/* Quote box */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
