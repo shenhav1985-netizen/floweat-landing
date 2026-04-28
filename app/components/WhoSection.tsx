@@ -40,7 +40,8 @@ export default function WhoSection() {
         backgroundImage: 'url(/images/hero4.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center top',
-        opacity: 0.05,
+        opacity: 0.15,
+        mixBlendMode: 'multiply',
         pointerEvents: 'none',
       }} />
       <div style={{ maxWidth: 680, margin: '0 auto', textAlign: 'center' }}>

@@ -44,7 +44,8 @@ export default function BonusesSection() {
         backgroundImage: 'url(/images/hero6.jpeg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center 30%',
-        opacity: 0.05,
+        opacity: 0.15,
+        mixBlendMode: 'multiply',
         pointerEvents: 'none',
       }} />
       <div style={{ maxWidth: 900, margin: '0 auto', textAlign: 'center' }}>

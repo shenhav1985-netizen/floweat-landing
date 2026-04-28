@@ -26,7 +26,8 @@ export default function PainSection() {
         backgroundImage: 'url(/images/hero3.jpg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center top',
-        opacity: 0.06,
+        opacity: 0.15,
+        mixBlendMode: 'luminosity',
         pointerEvents: 'none',
       }} />
       <div ref={ref} style={{ maxWidth: 680, margin: '0 auto', textAlign: 'center' }}>
