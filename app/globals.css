@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap');
+
+/* ─── Design System – Warm Editorial ─── */
+:root {
+  /* Backgrounds */
+  --bg-light:    #FAF6F1;
+  --bg-card:     #FFFFFF;
+  --bg-dark:     #1C1008;
+  --bg-dark2:    #150D06;
+
+  /* Accent */
+  --copper:      #C4704A;
+  --copper-light:#D98B65;
+  --copper-dark: #A05A36;
+  --sage:        #8FA888;
+  --sage-light:  #B2C4AC;
+
+  /* Text */
+  --text-dark:   #1A0D07;
+  --text-brown:  #3D2010;
+  --text-medium: #6B4535;
+  --text-light:  #9A7060;
+  --text-on-dark:#F5EDE4;
+  --text-muted:  #A08878;
+
+  /* Aliases for old components still in use */
+  --bg-cream:    var(--bg-light);
+  --bg-beige:    #F2E8DF;
+  --bg-primary:  var(--bg-light);
+  --bg-secondary:#F2E8DF;
+  --bg-section:  #F2E8DF;
+  --accent:      var(--copper);
+  --accent-light:var(--copper-light);
+  --accent-dark: var(--copper-dark);
+  --dark-brown:  var(--text-dark);
+  --mid-brown:   var(--text-brown);
+  --light-brown: var(--text-light);
+  --text-primary:var(--text-dark);
+  --text-secondary:var(--text-brown);
+  --green-wa:    #25D366;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  direction: rtl;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  font-family: 'Heebo', sans-serif;
+  font-size: 17px;
+  line-height: 1.9;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Heebo', sans-serif;
+  font-weight: 700;
+}
+
+/* ─── Section padding ─── */
+.section-pad {
+  padding: 88px 24px;
+}
+@media (max-width: 768px) {
+  .section-pad { padding: 64px 20px; }
+}
+
+/* ─── Copper divider ─── */
+.copper-divider {
+  width: 56px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--copper), transparent);
+  margin: 0 auto;
+}
+
+/* Keep old class name working */
+.gold-divider {
+  width: 56px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--copper), transparent);
+  margin: 0 auto;
+}
+
+/* ─── CTA Button ─── */
+.cta-btn {
+  display: inline-block;
+  padding: 16px 48px;
+  border-radius: 9999px;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  color: #FFFFFF;
+  background: linear-gradient(135deg, var(--copper-light) 0%, var(--copper) 50%, var(--copper-dark) 100%);
+  box-shadow: 0 8px 28px rgba(196,112,74,0.35);
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  border: none;
+}
+.cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 36px rgba(196,112,74,0.45);
+}
+
+/* ─── Card ─── */
+.warm-card {
+  background: var(--bg-card);
+  border: 1.5px solid rgba(196,112,74,0.15);
+  border-radius: 20px;
+  box-shadow: 0 4px 24px rgba(28,16,8,0.07);
+}
+
+/* ─── WhatsApp bubble ─── */
+.wa-bubble {
+  background: #E8F5E9;
+  border-radius: 4px 18px 18px 18px;
+  padding: 12px 16px;
+  font-family: 'Heebo', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #1a1a1a;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+.wa-bubble .time {
+  font-size: 11px;
+  color: #7a8a7a;
+  text-align: left;
+  margin-top: 5px;
+}
+
+/* ─── WhatsApp pulse ─── */
+@keyframes pulse-ring {
+  0%   { transform: scale(1); opacity: 0.7; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+.pulse-btn { position: relative; }
+.pulse-btn::before {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 9999px;
+  background: var(--green-wa);
+  animation: pulse-ring 2s ease-out infinite;
+  z-index: -1;
+}
+
+/* ─── Botanical bg (kept for backward compat) ─── */
+.botanical-bg { position: relative; overflow: hidden; }
+.botanical-bg > * { position: relative; z-index: 1; }
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg-light); }
+::-webkit-scrollbar-thumb { background: var(--copper); border-radius: 3px; }
