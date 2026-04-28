@@ -229,7 +229,7 @@ export default function HeroSection() {
                 width: '100%',
                 height: 'auto',
                 objectFit: 'contain',
-                objectPosition: 'bottom',
+                objectPosition: 'top',
                 filter: 'drop-shadow(0 12px 40px rgba(196,112,74,0.2))',
                 display: 'block',
               }}
@@ -266,8 +266,9 @@ export default function HeroSection() {
         }
         @media (max-width: 859px) {
           .hero-image-col {
-            max-height: 320px;
+            max-height: 380px;
             overflow: hidden;
+            align-items: flex-start !important;
           }
           .hero-layout {
             padding-top: max(100px, calc(env(safe-area-inset-top, 0px) + 80px)) !important;
