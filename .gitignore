@@ -5,3 +5,7 @@ node_modules/
 *.mp4
 *.heic
 public/videos/*.mp4
+.next/
+node_modules/
+tsconfig.tsbuildinfo
+temp_pdf.pdf
