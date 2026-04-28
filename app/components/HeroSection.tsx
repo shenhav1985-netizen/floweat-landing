@@ -73,11 +73,11 @@ export default function HeroSection() {
           <motion.div {...fadeUp(0.1)} style={{ padding: '0 8px' }}>
             <span style={{
               display: 'block',
-              fontFamily: 'var(--font-bodoni), Georgia, serif',
+              fontFamily: 'var(--font-playfair), Georgia, serif',
               fontWeight: 900,
-              fontStyle: 'italic',
+              fontStyle: 'normal',
               fontSize: 'clamp(2.8rem, 10vw, 7rem)',
-              letterSpacing: '0.2em',
+              letterSpacing: '0.22em',
               lineHeight: 1,
               background: 'linear-gradient(135deg, #E8B89A 0%, #C4704A 30%, #D98B65 60%, #F0D4B8 100%)',
               WebkitBackgroundClip: 'text',

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Cormorant_Garamond, Bodoni_Moda } from 'next/font/google';
+import { Cormorant_Garamond, Playfair_Display } from 'next/font/google';
 import './globals.css';
 
 const cormorant = Cormorant_Garamond({
@@ -10,11 +10,11 @@ const cormorant = Cormorant_Garamond({
   display: 'swap',
 });
 
-const bodoni = Bodoni_Moda({
+const playfair = Playfair_Display({
   subsets: ['latin'],
   weight: ['400', '700', '900'],
   style: ['normal', 'italic'],
-  variable: '--font-bodoni',
+  variable: '--font-playfair',
   display: 'swap',
 });
 
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="he" dir="rtl" className={`${cormorant.variable} ${bodoni.variable}`}>
+    <html lang="he" dir="rtl" className={`${cormorant.variable} ${playfair.variable}`}>
       <body>{children}</body>
     </html>
   );
