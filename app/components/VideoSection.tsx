@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const VIDEOS = [
   { id: 'SQH6WhpBRHQ' },
@@ -10,11 +10,8 @@ const VIDEOS = [
 
 function VideoPlayer({ id, delay }: { id: string; delay: number }) {
   const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: '-10%' });
 
-  const src = inView
-    ? `https://www.youtube.com/embed/${id}?autoplay=1&mute=1&rel=0&showinfo=0&modestbranding=1&controls=1&playsinline=1`
-    : `https://www.youtube.com/embed/${id}?rel=0&showinfo=0&modestbranding=1&controls=1`;
+  const src = `https://www.youtube.com/embed/${id}?rel=0&modestbranding=1&controls=1&playsinline=1`;
 
   return (
     <motion.div
@@ -53,16 +50,14 @@ function VideoPlayer({ id, delay }: { id: string; delay: number }) {
 }
 
 export default function VideoSection() {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: '-80px' });
-
   return (
-    <section ref={ref} style={{ background: 'var(--bg-light)', padding: '80px 24px' }}>
+    <section style={{ background: 'var(--bg-light)', padding: '80px 24px' }}>
       <div style={{ maxWidth: 860, margin: '0 auto' }}>
 
         <motion.div
           initial={{ scaleX: 0 }}
-          animate={inView ? { scaleX: 1 } : {}}
+          whileInView={{ scaleX: 1 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.7 }}
           className="copper-divider"
           style={{ marginBottom: 48 }}
@@ -81,7 +76,8 @@ export default function VideoSection() {
 
         <motion.div
           initial={{ scaleX: 0 }}
-          animate={inView ? { scaleX: 1 } : {}}
+          whileInView={{ scaleX: 1 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.4 }}
           className="copper-divider"
           style={{ marginTop: 48 }}
