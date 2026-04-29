@@ -121,17 +121,22 @@ export default function HeroSection() {
 
           {/* H1 */}
           <motion.h1 {...fadeUp(0.65)} style={{
-            fontSize: 'clamp(1.05rem, 2.6vw, 1.5rem)',
-            color: '#F0E8DF', lineHeight: 1.65, fontWeight: 700, marginBottom: 12,
+            fontSize: 'clamp(1.3rem, 3.2vw, 2rem)',
+            color: '#F0E8DF', lineHeight: 1.5, fontWeight: 900, marginBottom: 12,
           }}>
-            תוך 10 שבועות אנחנו מנתקות מהשורש את התלות באוכל
-            {' '}עד שאת יוצאת מהלופ של דיאטות ומאבק במשקל
-            {' '}ומעניקה לעצמך שגרת תזונה חופשית ויציבה שעובדת מבפנים
-            {' '}ומחזירה לך סדר, קלילות ושקט.{' '}
+            תפסיקי להיות אישה שנלחמת במשקל —
+            <br />
             <span style={{ color: 'var(--copper-light)' }}>
-              בעזרת שיטה מנטלית לשחרור דפוסי מחשבה שעבדה לאלפי נשים.
+              ותתחילי להיות אישה שהמשקל לא מעסיק אותה
             </span>
           </motion.h1>
+
+          <motion.p {...fadeUp(0.74)} style={{
+            fontSize: 'clamp(0.95rem, 2.2vw, 1.1rem)',
+            color: '#A89080', lineHeight: 1.7, marginBottom: 12,
+          }}>
+            תוך 10 שבועות, בעזרת שיטה מנטלית שעבדה לאלפי נשים
+          </motion.p>
 
           <motion.p {...fadeIn(0.8)} style={{
             fontSize: '1rem', color: 'var(--copper-light)', marginBottom: 10, fontWeight: 600,
