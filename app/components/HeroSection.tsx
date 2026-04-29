@@ -144,11 +144,20 @@ export default function HeroSection() {
             נשים שעברו את התהליך ירדו בממוצע 8-12 קילו — בלי דיאטה, בלי ספירת קלוריות, ובלי לחזור אחורה.
           </motion.p>
 
-          <motion.p {...fadeIn(0.88)} style={{
-            fontSize: '1rem', color: '#6B4535', marginBottom: 32, fontStyle: 'italic',
+          {/* נעמה testimonial */}
+          <motion.div {...fadeIn(0.88)} style={{
+            display: 'inline-block',
+            margin: '0 auto 28px',
+            padding: '14px 20px',
+            borderRadius: 14,
+            background: 'rgba(196,112,74,0.08)',
+            border: '1px solid rgba(196,112,74,0.2)',
           }}>
-            מזינות את הגוף והראש, בלי להישחק ובלי להתחיל מחדש כל שבוע
-          </motion.p>
+            <p style={{ fontSize: '0.93rem', color: '#D4B89A', lineHeight: 1.7, fontStyle: 'italic' }}>
+              "נעמה בת 36, נשואה ואמא לשלושה, ירדה 11 קילו ב-10 שבועות.
+              <br />היא לא על דיאטה. היא פשוט לא אותה אישה."
+            </p>
+          </motion.div>
 
           {/* CTA */}
           <motion.div {...fadeUp(0.9)}>
@@ -157,7 +166,7 @@ export default function HeroSection() {
               className="cta-btn"
               whileHover={{ scale: 1.04, y: -2 }} whileTap={{ scale: 0.97 }}
             >
-              אני רוצה לבדוק שהתהליך מתאים לי ←
+              אני רוצה להפסיק להיאבק במשקל ←
             </motion.a>
           </motion.div>
 
