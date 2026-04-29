@@ -134,6 +134,12 @@ export default function HeroSection() {
           </motion.h1>
 
           <motion.p {...fadeIn(0.8)} style={{
+            fontSize: '1rem', color: 'var(--copper-light)', marginBottom: 10, fontWeight: 600,
+          }}>
+            נשים שעברו את התהליך ירדו בממוצע 8-12 קילו — בלי דיאטה, בלי ספירת קלוריות, ובלי לחזור אחורה.
+          </motion.p>
+
+          <motion.p {...fadeIn(0.88)} style={{
             fontSize: '1rem', color: '#6B4535', marginBottom: 32, fontStyle: 'italic',
           }}>
             מזינות את הגוף והראש, בלי להישחק ובלי להתחיל מחדש כל שבוע
