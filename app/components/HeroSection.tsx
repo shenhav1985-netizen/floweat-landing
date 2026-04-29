@@ -135,7 +135,7 @@ export default function HeroSection() {
             fontSize: 'clamp(0.95rem, 2.2vw, 1.1rem)',
             color: '#A89080', lineHeight: 1.7, marginBottom: 12,
           }}>
-            תוך 10 שבועות, בעזרת שיטה מנטלית שעבדה לאלפי נשים
+            בעזרת שיטה משולבת שכוללת תזונה עשירה ומדויקת יחד עם עבודה תודעתית שמשנה את הזהות — לא רק את הצלחת.
           </motion.p>
 
           <motion.p {...fadeIn(0.8)} style={{
