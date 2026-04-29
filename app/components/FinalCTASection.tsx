@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 
 export default function FinalCTASection() {
-  const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
@@ -12,16 +11,16 @@ export default function FinalCTASection() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!name.trim() || !phone.trim()) { setError('נא למלא שם וטלפון'); return; }
+    if (!phone.trim()) { setError('נא למלא מספר טלפון'); return; }
     setSubmitting(true);
 
     fetch('/api/leads', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, phone, email }),
+      body: JSON.stringify({ phone, email }),
     }).catch(() => {});
 
-    const msg = encodeURIComponent(`היי שנהב! קוראים לי ${name}. אני רוצה לבדוק אם התהליך מתאים לי`);
+    const msg = encodeURIComponent('היי שנהב! אני רוצה לבדוק אם התהליך מתאים לי');
     window.open(`https://wa.me/972506409478?text=${msg}`, '_blank');
     setSubmitting(false);
   };
@@ -145,21 +144,15 @@ export default function FinalCTASection() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: 16, marginBottom: 24 }}>
             <div>
               <label style={{ display: 'block', textAlign: 'right', marginBottom: 6, fontSize: 13, fontWeight: 600, color: '#A89080' }}>
-                שם מלא
-              </label>
-              <input type="text" value={name} onChange={e => setName(e.target.value)} placeholder="איך קוראים לך?" style={inputStyle} />
-            </div>
-            <div>
-              <label style={{ display: 'block', textAlign: 'right', marginBottom: 6, fontSize: 13, fontWeight: 600, color: '#A89080' }}>
                 טלפון
               </label>
-              <input type="tel" value={phone} onChange={e => setPhone(e.target.value)} placeholder="050-0000000" style={{ ...inputStyle, direction: 'ltr', textAlign: 'right' }} />
+              <input type="tel" value={phone} onChange={e => setPhone(e.target.value)} placeholder="" style={{ ...inputStyle, direction: 'ltr', textAlign: 'right' }} />
             </div>
             <div>
               <label style={{ display: 'block', textAlign: 'right', marginBottom: 6, fontSize: 13, fontWeight: 600, color: '#A89080' }}>
                 מייל
               </label>
-              <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="your@email.com" style={{ ...inputStyle, direction: 'ltr', textAlign: 'right' }} />
+              <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="" style={{ ...inputStyle, direction: 'ltr', textAlign: 'right' }} />
             </div>
           </div>
 
