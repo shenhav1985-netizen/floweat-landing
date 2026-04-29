@@ -113,6 +113,21 @@ export default function MechanismSection() {
           </p>
         </motion.div>
 
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 1.4 }}
+          style={{ marginTop: 20, textAlign: 'center' }}
+        >
+          <p style={{ fontSize: '1rem', color: 'var(--copper-light)', fontWeight: 700, lineHeight: 1.8 }}>
+            כשהמנגנון הנפשי משתחרר — הגוף מוריד את המשקל העודף בצורה טבעית.
+          </p>
+          <p style={{ fontSize: '0.93rem', color: '#6B5040', marginTop: 6 }}>
+            לא דיאטה. לא כוח רצון. הגוף פשוט עוקב אחרי הראש.
+          </p>
+        </motion.div>
+
       </div>
     </section>
   );
