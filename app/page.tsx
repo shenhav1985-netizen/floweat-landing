@@ -3,7 +3,6 @@ import HeroSection from './components/HeroSection';
 import StickyWhatsApp from './components/StickyWhatsApp';
 
 const PainSection         = dynamic(() => import('./components/PainSection'));
-const MethodSection       = dynamic(() => import('./components/MethodSection'));
 const VisionSection       = dynamic(() => import('./components/VisionSection'));
 const WhoSection          = dynamic(() => import('./components/WhoSection'));
 const ProgramSection      = dynamic(() => import('./components/ProgramSection'));
@@ -20,7 +19,6 @@ export default function Home() {
     <main>
       <HeroSection />
       <PainSection />
-      <MethodSection />
       <VisionSection />
       <WhoSection />
       <ProgramSection />
