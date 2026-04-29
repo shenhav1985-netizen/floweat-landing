@@ -135,7 +135,7 @@ export default function HeroSection() {
             fontSize: 'clamp(0.95rem, 2.2vw, 1.1rem)',
             color: '#A89080', lineHeight: 1.7, marginBottom: 12,
           }}>
-            בעזרת שיטה משולבת שכוללת תזונה עשירה ומדויקת יחד עם עבודה תודעתית שמשנה את הזהות — לא רק את הצלחת.
+            בעזרת שיטה שמשלבת תזונה מדויקת יחד עם תודעת שחרור מול האכילה
           </motion.p>
 
           <motion.p {...fadeIn(0.8)} style={{
