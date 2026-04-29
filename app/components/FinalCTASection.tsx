@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 
 export default function FinalCTASection() {
+  const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
@@ -17,7 +18,7 @@ export default function FinalCTASection() {
     fetch('/api/leads', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ phone, email }),
+      body: JSON.stringify({ name, phone, email }),
     }).catch(() => {});
 
     const msg = encodeURIComponent('היי שנהב! אני רוצה לבדוק אם התהליך מתאים לי');
@@ -142,6 +143,12 @@ export default function FinalCTASection() {
           }}
         >
           <div style={{ display: 'flex', flexDirection: 'column', gap: 16, marginBottom: 24 }}>
+            <div>
+              <label style={{ display: 'block', textAlign: 'right', marginBottom: 6, fontSize: 13, fontWeight: 600, color: '#A89080' }}>
+                שם מלא
+              </label>
+              <input type="text" value={name} onChange={e => setName(e.target.value)} placeholder="" style={inputStyle} />
+            </div>
             <div>
               <label style={{ display: 'block', textAlign: 'right', marginBottom: 6, fontSize: 13, fontWeight: 600, color: '#A89080' }}>
                 טלפון
