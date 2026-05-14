@@ -20,7 +20,7 @@ const fadeIn = (delay = 0) => ({
 export default function HeroSection() {
   return (
     <section style={{
-      background: 'var(--bg-dark)',
+      background: 'linear-gradient(155deg, #FAF6F1 0%, #F4EDE3 55%, #EDE0CE 100%)',
       minHeight: '100svh',
       display: 'flex',
       flexDirection: 'column',
@@ -28,145 +28,214 @@ export default function HeroSection() {
       position: 'relative',
       overflow: 'hidden',
     }}>
-      {/* Background glows */}
+      {/* Warm radial glow */}
       <div style={{
-        position: 'absolute', top: '20%', right: '-5%',
-        width: '55vw', maxWidth: 500, height: '55vw', maxHeight: 500,
-        background: 'radial-gradient(ellipse, rgba(196,112,74,0.09) 0%, transparent 65%)',
+        position: 'absolute', top: '15%', right: '-8%',
+        width: '60vw', maxWidth: 520, height: '60vw', maxHeight: 520,
+        background: 'radial-gradient(ellipse, rgba(196,112,74,0.12) 0%, transparent 65%)',
         pointerEvents: 'none',
       }} />
       <div style={{
-        position: 'absolute', bottom: '10%', left: '-10%',
-        width: '40vw', maxWidth: 360, height: '40vw', maxHeight: 360,
-        background: 'radial-gradient(ellipse, rgba(143,168,136,0.05) 0%, transparent 65%)',
+        position: 'absolute', bottom: '5%', left: '-8%',
+        width: '45vw', maxWidth: 380, height: '45vw', maxHeight: 380,
+        background: 'radial-gradient(ellipse, rgba(143,168,136,0.08) 0%, transparent 65%)',
         pointerEvents: 'none',
       }} />
 
-      {/* Main container — two columns on desktop */}
-      <div style={{
-        maxWidth: 1080,
-        margin: '0 auto',
-        padding: '72px 28px 60px',
-        width: '100%',
-        display: 'grid',
-        gridTemplateColumns: '1fr',
-        gap: 40,
-        alignItems: 'center',
-      }}
+      {/* Main layout */}
+      <div
+        style={{
+          maxWidth: 1080,
+          margin: '0 auto',
+          padding: '72px 28px 60px',
+          width: '100%',
+          display: 'grid',
+          gridTemplateColumns: '1fr',
+          gap: 40,
+          alignItems: 'center',
+        }}
         className="hero-layout"
       >
-
         {/* ── TEXT COLUMN ── */}
         <div style={{ textAlign: 'center' }} className="hero-text">
 
+          {/* Top line */}
           <motion.div
             initial={{ scaleX: 0 }} animate={{ scaleX: 1 }}
             transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
             style={{
               height: 1,
-              background: 'linear-gradient(90deg, transparent, rgba(196,112,74,0.5), transparent)',
+              background: 'linear-gradient(90deg, transparent, rgba(196,112,74,0.4), transparent)',
               marginBottom: 28,
             }}
           />
 
-          {/* FLOWEAT */}
-          <motion.div {...fadeUp(0.1)} style={{ padding: '0 8px' }}>
+          {/* ★ HOOK */}
+          <motion.div {...fadeUp(0)} style={{ marginBottom: 28 }}>
+            {/* כאב */}
+            <p style={{
+              fontSize: 'clamp(1rem, 2.4vw, 1.2rem)',
+              fontWeight: 700,
+              color: 'var(--text-dark)',
+              lineHeight: 1.85,
+              marginBottom: 20,
+            }}>
+              המאבק עם האוכל הוא אחד הדברים הכי מתישים שיש.
+              <br />
+              לא כי הוא קשה פיזית.
+              <br />
+              כי הוא לא נגמר.
+            </p>
+            <p style={{
+              fontSize: 'clamp(0.95rem, 2.1vw, 1.05rem)',
+              fontWeight: 400,
+              color: 'var(--text-medium)',
+              lineHeight: 2,
+              marginBottom: 24,
+            }}>
+              בוקר, צהריים, ערב, לילה.
+              <br />
+              כל ארוחה היא החלטה.
+              <br />
+              כל החלטה היא מאמץ.
+              <br />
+              וכל נפילה היא אכזבה.
+            </p>
+
+            {/* קו הפרדה */}
+            <div style={{
+              width: 40,
+              height: 1,
+              background: 'rgba(196,112,74,0.35)',
+              margin: '0 auto 24px',
+            }} />
+
+            {/* פתרון */}
+            <p style={{
+              fontSize: 'clamp(0.95rem, 2.1vw, 1.05rem)',
+              fontWeight: 400,
+              color: 'var(--text-medium)',
+              lineHeight: 2,
+              marginBottom: 8,
+            }}>
+              יש נשים שלא חושבות על אוכל כל היום.
+              <br />
+              שאוכלות ועוברות הלאה.
+              <br />
+              בלי חרטה. בלי חשבון. בלי הקול הזה בראש.
+            </p>
+            <p style={{
+              fontSize: 'clamp(1rem, 2.3vw, 1.15rem)',
+              fontWeight: 700,
+              color: 'var(--text-dark)',
+              lineHeight: 1.7,
+            }}>
+              את רוצה להיות אחת מהן וזה אפשרי!
+              <br />
+              זה בדיוק מה שאנחנו עושות כאן.
+            </p>
+          </motion.div>
+
+          {/* Divider */}
+          <motion.div
+            initial={{ scaleX: 0 }} animate={{ scaleX: 1 }}
+            transition={{ duration: 0.9, delay: 0.15 }}
+            className="copper-divider"
+            style={{ marginBottom: 24 }}
+          />
+
+          {/* Brand name */}
+          <motion.div {...fadeUp(0.2)} style={{ padding: '0 8px', marginBottom: 10 }}>
             <span style={{
               display: 'block',
               fontFamily: 'Heebo, sans-serif',
               fontWeight: 900,
-              fontStyle: 'normal',
-              fontSize: 'clamp(2.2rem, 9vw, 6.5rem)',
-              letterSpacing: '0.12em',
-              lineHeight: 1,
-              background: 'linear-gradient(135deg, #E8B89A 0%, #C4704A 30%, #D98B65 60%, #F0D4B8 100%)',
+              fontSize: 'clamp(2rem, 8vw, 5.5rem)',
+              lineHeight: 1.1,
+              background: 'linear-gradient(135deg, #A05A36 0%, #C4704A 35%, #E8A070 60%, #C4704A 80%, #8B3D1E 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text',
-              textTransform: 'uppercase',
             }}>
-              floweat
+              מעדכנות גרסה
             </span>
           </motion.div>
 
           {/* by שנהב */}
-          <motion.div {...fadeIn(0.35)} style={{
+          <motion.div {...fadeIn(0.38)} style={{
             display: 'flex', alignItems: 'center', justifyContent: 'center',
-            gap: 14, marginTop: 10, marginBottom: 26,
+            gap: 14, marginBottom: 28,
           }}>
-            <span style={{ flex: 1, height: 1, background: 'rgba(196,112,74,0.25)' }} />
+            <span style={{ flex: 1, height: 1, background: 'rgba(196,112,74,0.22)' }} />
             <span style={{
-              fontSize: 12, fontWeight: 500, letterSpacing: '0.28em',
-              color: 'var(--copper-light)', textTransform: 'uppercase', whiteSpace: 'nowrap',
+              fontSize: 11, fontWeight: 600, letterSpacing: '0.28em',
+              color: 'var(--copper)', textTransform: 'uppercase', whiteSpace: 'nowrap',
             }}>
               by שנהב בנימין
             </span>
-            <span style={{ flex: 1, height: 1, background: 'rgba(196,112,74,0.25)' }} />
+            <span style={{ flex: 1, height: 1, background: 'rgba(196,112,74,0.22)' }} />
           </motion.div>
 
-          {/* Subtitle */}
-          <motion.p {...fadeUp(0.45)} style={{
-            fontSize: 'clamp(0.95rem, 2.3vw, 1.1rem)',
-            color: '#A89080', lineHeight: 1.75, marginBottom: 18,
+          {/* Main promise */}
+          <motion.h1 {...fadeUp(0.5)} style={{
+            fontSize: 'clamp(1.25rem, 3vw, 1.85rem)',
+            color: 'var(--text-dark)',
+            lineHeight: 1.5,
+            fontWeight: 900,
+            marginBottom: 14,
           }}>
-            התחנה הסופית לנשים שעייפות ממאבק בירידה במשקל
-            <br />ורוצות לבנות אורח חיים יציב בראש שקט
-          </motion.p>
-
-          <motion.div
-            initial={{ scaleX: 0 }} animate={{ scaleX: 1 }}
-            transition={{ duration: 0.8, delay: 0.55 }}
-            className="copper-divider" style={{ marginBottom: 22 }}
-          />
-
-          {/* H1 */}
-          <motion.h1 {...fadeUp(0.65)} style={{
-            fontSize: 'clamp(1.3rem, 3.2vw, 2rem)',
-            color: '#F0E8DF', lineHeight: 1.5, fontWeight: 900, marginBottom: 12,
-          }}>
-            תפסיקי להיות אישה שנלחמת במשקל —
+            10 שבועות שמנתקים את התלות באוכל מהשורש
             <br />
-            <span style={{ color: 'var(--copper-light)' }}>
-              ותתחילי להיות אישה שהמשקל לא מעסיק אותה
+            <span style={{ color: 'var(--copper)', fontWeight: 700 }}>
+              ויוצאים מהלופ של דיאטות, לתמיד.
             </span>
           </motion.h1>
 
-          <motion.p {...fadeUp(0.74)} style={{
-            fontSize: 'clamp(0.95rem, 2.2vw, 1.1rem)',
-            color: '#A89080', lineHeight: 1.7, marginBottom: 12,
+          <motion.p {...fadeUp(0.62)} style={{
+            fontSize: 'clamp(0.92rem, 2.1vw, 1.05rem)',
+            color: 'var(--text-medium)',
+            lineHeight: 1.8,
+            marginBottom: 10,
           }}>
-            בעזרת שיטה שמשלבת תזונה עשירה ומדויקת יחד עם תודעת שחרור מול האכילה
+            בעזרת שיטה שמשלבת תזונה מדויקת יחד עם תודעת שחרור ומכילה
           </motion.p>
 
-          <motion.p {...fadeIn(0.8)} style={{
-            fontSize: '1rem', color: 'var(--copper-light)', marginBottom: 10, fontWeight: 600,
+          <motion.p {...fadeIn(0.72)} style={{
+            fontSize: '0.97rem',
+            color: 'var(--copper)',
+            marginBottom: 28,
+            fontWeight: 600,
           }}>
             נשים שעברו את התהליך ירדו בממוצע 8-12 קילו — בלי דיאטה, בלי ספירת קלוריות, ובלי לחזור אחורה.
           </motion.p>
 
           {/* CTA */}
-          <motion.div {...fadeUp(0.9)}>
+          <motion.div {...fadeUp(0.85)}>
             <motion.a
-              href={WA_URL} target="_blank" rel="noopener noreferrer"
+              href={WA_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="cta-btn"
-              whileHover={{ scale: 1.04, y: -2 }} whileTap={{ scale: 0.97 }}
+              whileHover={{ scale: 1.04, y: -2 }}
+              whileTap={{ scale: 0.97 }}
             >
-              אני רוצה להפסיק להיאבק במשקל ←
+              אני רוצה לבדוק שהתהליך מתאים לי ←
             </motion.a>
           </motion.div>
 
-          <motion.p {...fadeIn(1.05)} style={{
-            marginTop: 12, fontSize: 13, color: '#4A3028', letterSpacing: '0.02em',
+          <motion.p {...fadeIn(1.0)} style={{
+            marginTop: 12, fontSize: 13, color: 'var(--text-light)', letterSpacing: '0.02em',
           }}>
-            ✓&nbsp; בחינם וללא התחייבות
+            ✓ בחינם וללא התחייבות
           </motion.p>
 
+          {/* Bottom line */}
           <motion.div
             initial={{ scaleX: 0 }} animate={{ scaleX: 1 }}
-            transition={{ duration: 1.1, delay: 0.25 }}
+            transition={{ duration: 1.1, delay: 0.3 }}
             style={{
               height: 1,
-              background: 'linear-gradient(90deg, transparent, rgba(196,112,74,0.4), transparent)',
+              background: 'linear-gradient(90deg, transparent, rgba(196,112,74,0.35), transparent)',
               marginTop: 36,
             }}
           />
@@ -185,46 +254,35 @@ export default function HeroSection() {
             alignItems: 'flex-end',
           }}
         >
-          {/* Decorative copper ring behind image */}
+          {/* Decorative copper ring */}
           <div style={{
-            position: 'absolute',
-            bottom: 0,
-            left: '50%',
+            position: 'absolute', bottom: 0, left: '50%',
             transform: 'translateX(-50%)',
-            width: '88%',
-            maxWidth: 340,
-            height: '88%',
+            width: '88%', maxWidth: 340, height: '88%',
             borderRadius: '50% 50% 48% 48%',
-            border: '1.5px solid rgba(196,112,74,0.2)',
-            background: 'radial-gradient(ellipse at bottom, rgba(196,112,74,0.07) 0%, transparent 70%)',
+            border: '1.5px solid rgba(196,112,74,0.25)',
+            background: 'radial-gradient(ellipse at bottom, rgba(196,112,74,0.08) 0%, transparent 70%)',
             zIndex: 0,
           }} />
 
-          {/* Corner accent lines */}
+          {/* Corner accents */}
           <div style={{
             position: 'absolute', top: '12%', right: '8%',
             width: 48, height: 48,
-            borderTop: '2px solid rgba(196,112,74,0.4)',
-            borderRight: '2px solid rgba(196,112,74,0.4)',
-            borderRadius: '0 8px 0 0',
-            zIndex: 2,
+            borderTop: '2px solid rgba(196,112,74,0.45)',
+            borderRight: '2px solid rgba(196,112,74,0.45)',
+            borderRadius: '0 8px 0 0', zIndex: 2,
           }} />
           <div style={{
             position: 'absolute', bottom: '8%', left: '8%',
             width: 48, height: 48,
-            borderBottom: '2px solid rgba(196,112,74,0.4)',
-            borderLeft: '2px solid rgba(196,112,74,0.4)',
-            borderRadius: '0 0 0 8px',
-            zIndex: 2,
+            borderBottom: '2px solid rgba(196,112,74,0.45)',
+            borderLeft: '2px solid rgba(196,112,74,0.45)',
+            borderRadius: '0 0 0 8px', zIndex: 2,
           }} />
 
-          {/* The image */}
-          <div style={{
-            position: 'relative',
-            zIndex: 1,
-            width: '100%',
-            maxWidth: 380,
-          }}>
+          {/* Image */}
+          <div style={{ position: 'relative', zIndex: 1, width: '100%', maxWidth: 380 }}>
             <Image
               src="/images/hero2.png"
               alt="שנהב בנימין"
@@ -236,13 +294,12 @@ export default function HeroSection() {
                 height: 'auto',
                 objectFit: 'contain',
                 objectPosition: 'top',
-                filter: 'drop-shadow(0 12px 40px rgba(196,112,74,0.2))',
+                filter: 'drop-shadow(0 12px 40px rgba(196,112,74,0.18))',
                 display: 'block',
               }}
             />
           </div>
         </motion.div>
-
       </div>
 
       {/* Scroll indicator */}
@@ -272,7 +329,7 @@ export default function HeroSection() {
         }
         @media (max-width: 859px) {
           .hero-image-col {
-            max-height: 380px;
+            max-height: 360px;
             overflow: hidden;
             align-items: flex-start !important;
           }

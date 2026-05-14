@@ -17,7 +17,7 @@ const notFor = [
 
 export default function NotForSection() {
   return (
-    <section style={{ background: '#1C1008', padding: '96px 24px' }}>
+    <section style={{ background: 'var(--bg-light)', padding: '96px 24px' }}>
       <div style={{ maxWidth: 860, margin: '0 auto', textAlign: 'center' }}>
 
         {/* Eyebrow */}
@@ -47,7 +47,7 @@ export default function NotForSection() {
           style={{
             fontSize: 'clamp(1.8rem, 4.5vw, 2.8rem)',
             fontWeight: 900,
-            color: '#F5EDE4',
+            color: 'var(--text-dark)',
             lineHeight: 1.25,
             marginBottom: 20,
           }}
@@ -94,7 +94,7 @@ export default function NotForSection() {
                 fontWeight: 700,
                 flexShrink: 0,
               }}>✓</span>
-              <h3 style={{ fontSize: '1rem', fontWeight: 700, color: '#F0E8DF' }}>למי זה מתאים</h3>
+              <h3 style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--text-dark)' }}>למי זה מתאים</h3>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
               {forWho.map((item, i) => (
@@ -108,7 +108,7 @@ export default function NotForSection() {
                   gap: 10,
                 }}>
                   <span style={{ color: 'var(--sage)', flexShrink: 0, marginTop: 2, fontSize: 14 }}>✦</span>
-                  <p style={{ fontSize: '0.9rem', color: '#B0A090', lineHeight: 1.75 }}>{item}</p>
+                  <p style={{ fontSize: '0.9rem', color: 'var(--text-brown)', lineHeight: 1.75 }}>{item}</p>
                 </div>
               ))}
             </div>
@@ -126,12 +126,12 @@ export default function NotForSection() {
                 width: 28,
                 height: 28,
                 borderRadius: '50%',
-                background: 'rgba(255,255,255,0.1)',
+                background: 'rgba(196,112,74,0.1)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 fontSize: 14,
-                color: '#888',
+                color: 'var(--copper)',
                 fontWeight: 700,
                 flexShrink: 0,
               }}>✕</span>
@@ -140,8 +140,8 @@ export default function NotForSection() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
               {notFor.map((item, i) => (
                 <div key={i} style={{
-                  background: 'rgba(255,255,255,0.03)',
-                  border: '1px solid rgba(255,255,255,0.07)',
+                  background: 'rgba(196,112,74,0.05)',
+                  border: '1px solid rgba(196,112,74,0.15)',
                   borderRadius: 14,
                   padding: '14px 16px',
                   display: 'flex',
@@ -166,7 +166,7 @@ export default function NotForSection() {
           <p style={{
             fontSize: '1.1rem',
             fontWeight: 700,
-            color: '#F0E8DF',
+            color: 'var(--text-dark)',
             lineHeight: 1.6,
           }}>
             יש לך שיטה בוגרת. אחראית. יציבה ואנושית.

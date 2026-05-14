@@ -1,4 +1,4 @@
-import type { Metadata, Viewport } from 'next';
+﻿import type { Metadata, Viewport } from 'next';
 import { Cormorant_Garamond, Playfair_Display } from 'next/font/google';
 import './globals.css';
 
@@ -25,11 +25,11 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: 'FLOWEAT | התחנה הסופית לנשים שעייפות ממאבק בירידה במשקל',
-  description: 'תוך 10 שבועות אנחנו מנתקות מהשורש את התלות באוכל. שיטה מנטלית לשחרור דפוסי מחשבה שעבדה לאלפי נשים. ללא דיאטות, ללא כוח רצון.',
+  title: 'מעדכנות גרסה | התחנה הסופית לנשים שעייפות ממאבק',
+  description: '׳×׳•׳ 10 ׳©׳‘׳•׳¢׳•׳× ׳׳ ׳—׳ ׳• ׳׳ ׳×׳§׳•׳× ׳׳”׳©׳•׳¨׳© ׳׳× ׳”׳×׳׳•׳× ׳‘׳׳•׳›׳. ׳©׳™׳˜׳” ׳׳ ׳˜׳׳™׳× ׳׳©׳—׳¨׳•׳¨ ׳“׳₪׳•׳¡׳™ ׳׳—׳©׳‘׳” ׳©׳¢׳‘׳“׳” ׳׳׳׳₪׳™ ׳ ׳©׳™׳. ׳׳׳ ׳“׳™׳׳˜׳•׳×, ׳׳׳ ׳›׳•׳— ׳¨׳¦׳•׳.',
   openGraph: {
-    title: 'floweat | התחנה הסופית לנשים שעייפות ממאבק',
-    description: 'תוך 10 שבועות — ללא דיאטות, ללא כוח רצון, עם שקט מנטלי אמיתי',
+    title: 'מעדכנות גרסה | התחנה הסופית לנשים שעייפות ממאבק',
+    description: '׳×׳•׳ 10 ׳©׳‘׳•׳¢׳•׳× ג€” ׳׳׳ ׳“׳™׳׳˜׳•׳×, ׳׳׳ ׳›׳•׳— ׳¨׳¦׳•׳, ׳¢׳ ׳©׳§׳˜ ׳׳ ׳˜׳׳™ ׳׳׳™׳×׳™',
     locale: 'he_IL',
     type: 'website',
   },
@@ -42,3 +42,4 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 }
+
