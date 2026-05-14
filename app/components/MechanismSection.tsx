@@ -32,7 +32,7 @@ const steps = [
 
 export default function MechanismSection() {
   return (
-    <section style={{ background: '#1C1008', padding: '96px 24px' }}>
+    <section style={{ background: 'var(--bg-taupe)', padding: '96px 24px' }}>
       <div style={{ maxWidth: 700, margin: '0 auto', textAlign: 'center' }}>
 
         <motion.p
@@ -40,7 +40,7 @@ export default function MechanismSection() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.6 }}
-          style={{ fontSize: 12, fontWeight: 600, letterSpacing: '0.28em', textTransform: 'uppercase', color: 'var(--copper-light)', marginBottom: 16 }}
+          style={{ fontSize: 12, fontWeight: 600, letterSpacing: '0.28em', textTransform: 'uppercase', color: 'var(--copper-dark)', marginBottom: 16 }}
         >
           איך זה עובד
         </motion.p>
@@ -50,7 +50,7 @@ export default function MechanismSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          style={{ fontSize: 'clamp(1.8rem, 4.5vw, 2.8rem)', fontWeight: 900, color: '#F5EDE4', lineHeight: 1.25, marginBottom: 14 }}
+          style={{ fontSize: 'clamp(1.8rem, 4.5vw, 2.8rem)', fontWeight: 900, color: 'var(--text-dark)', lineHeight: 1.25, marginBottom: 14 }}
         >
           הצצה למנגנון
           <br />
@@ -62,7 +62,7 @@ export default function MechanismSection() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          style={{ fontSize: '1rem', color: '#A89080', marginBottom: 20 }}
+          style={{ fontSize: '1rem', color: 'var(--text-medium)', marginBottom: 20 }}
         >
           ב-10 שבועות אנחנו מתקינות לך מערכת הפעלה חדשה.
         </motion.p>
@@ -84,14 +84,14 @@ export default function MechanismSection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: '-60px' }}
               transition={{ duration: 0.6, delay: i * 0.1 + 0.3, ease: [0.22, 1, 0.36, 1] }}
-              style={{ background: 'rgba(255,255,255,0.04)', border: '1.5px solid rgba(196,112,74,0.18)', borderRadius: 18, padding: '22px 22px 22px 22px', position: 'relative' }}
+              style={{ background: 'rgba(255,255,255,0.5)', border: '1.5px solid rgba(196,112,74,0.2)', borderRadius: 18, padding: '22px 22px 22px 22px', position: 'relative', boxShadow: '0 2px 12px rgba(28,16,8,0.06)' }}
             >
               <div style={{ position: 'absolute', top: 18, left: 18, width: 32, height: 32, borderRadius: '50%', background: 'var(--copper)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 13, fontWeight: 700, color: '#FFFFFF' }}>
                 {i + 1}
               </div>
-              <h3 style={{ fontSize: '1.05rem', fontWeight: 700, color: '#F0E8DF', marginBottom: 8 }}>{step.title}</h3>
-              <p style={{ fontSize: '0.93rem', color: '#A89080', lineHeight: 1.75, marginBottom: 14 }}>{step.body}</p>
-              <span style={{ display: 'inline-block', padding: '6px 16px', borderRadius: 9999, fontSize: '0.83rem', fontWeight: 600, background: 'rgba(196,112,74,0.12)', color: 'var(--copper-light)', border: '1px solid rgba(196,112,74,0.25)' }}>
+              <h3 style={{ fontSize: '1.05rem', fontWeight: 700, color: 'var(--text-dark)', marginBottom: 8 }}>{step.title}</h3>
+              <p style={{ fontSize: '0.93rem', color: 'var(--text-medium)', lineHeight: 1.75, marginBottom: 14 }}>{step.body}</p>
+              <span style={{ display: 'inline-block', padding: '6px 16px', borderRadius: 9999, fontSize: '0.83rem', fontWeight: 600, background: 'rgba(196,112,74,0.15)', color: 'var(--copper-dark)', border: '1px solid rgba(196,112,74,0.3)' }}>
                 {step.badge}
               </span>
             </motion.div>
@@ -103,10 +103,10 @@ export default function MechanismSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 1.2 }}
-          style={{ marginTop: 32, padding: '28px 24px', borderRadius: 18, background: 'rgba(196,112,74,0.08)', border: '1.5px solid rgba(196,112,74,0.2)', textAlign: 'center' }}
+          style={{ marginTop: 32, padding: '28px 24px', borderRadius: 18, background: 'rgba(255,255,255,0.45)', border: '1.5px solid rgba(196,112,74,0.25)', textAlign: 'center' }}
         >
-          <p style={{ fontWeight: 700, fontSize: '1.05rem', color: 'var(--copper-light)', marginBottom: 8 }}>תביני:</p>
-          <p style={{ fontSize: '0.97rem', color: '#A89080', lineHeight: 1.8 }}>
+          <p style={{ fontWeight: 700, fontSize: '1.05rem', color: 'var(--copper-dark)', marginBottom: 8 }}>תביני:</p>
+          <p style={{ fontSize: '0.97rem', color: 'var(--text-medium)', lineHeight: 1.8 }}>
             אי אפשר לפתור בעיה רגשית עם פתרון טכני כמו ספירת קלוריות.
             <br />
             זה כמו לנסות לכבות שריפה עם מחשבון.
@@ -120,10 +120,10 @@ export default function MechanismSection() {
           transition={{ duration: 0.7, delay: 1.4 }}
           style={{ marginTop: 20, textAlign: 'center' }}
         >
-          <p style={{ fontSize: '1rem', color: 'var(--copper-light)', fontWeight: 700, lineHeight: 1.8 }}>
+          <p style={{ fontSize: '1rem', color: 'var(--copper-dark)', fontWeight: 700, lineHeight: 1.8 }}>
             כשהמנגנון הנפשי משתחרר — הגוף מוריד את המשקל העודף בצורה טבעית.
           </p>
-          <p style={{ fontSize: '0.93rem', color: '#6B5040', marginTop: 6 }}>
+          <p style={{ fontSize: '0.93rem', color: 'var(--text-medium)', marginTop: 6 }}>
             לא דיאטה. לא כוח רצון. הגוף פשוט עוקב אחרי הראש.
           </p>
         </motion.div>

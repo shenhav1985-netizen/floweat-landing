@@ -10,7 +10,7 @@ const stats = [
 
 export default function StatsStrip() {
   return (
-    <section style={{ background: '#140C05', padding: '40px 24px', borderTop: '1px solid rgba(196,112,74,0.12)', borderBottom: '1px solid rgba(196,112,74,0.12)' }}>
+    <section style={{ background: 'var(--bg-taupe)', padding: '40px 24px', borderTop: '1px solid rgba(196,112,74,0.2)', borderBottom: '1px solid rgba(196,112,74,0.2)' }}>
       <div style={{
         maxWidth: 860,
         margin: '0 auto',
@@ -40,7 +40,7 @@ export default function StatsStrip() {
             }}>
               {s.number}
             </div>
-            <div style={{ fontSize: '0.88rem', color: '#A89080', lineHeight: 1.5 }}>
+            <div style={{ fontSize: '0.88rem', color: 'var(--text-dark)', lineHeight: 1.5, opacity: 0.8 }}>
               {s.label}
             </div>
           </motion.div>

@@ -7,7 +7,8 @@
 /* ─── Design System – Warm Editorial ─── */
 :root {
   /* Backgrounds */
-  --bg-light:    #FAF6F1;
+  --bg-light:    #F5F0E8;
+  --bg-taupe:    #C4B8A8;
   --bg-card:     #FFFFFF;
   --bg-dark:     #3A1E0C;
   --bg-dark2:    #4E2A14;

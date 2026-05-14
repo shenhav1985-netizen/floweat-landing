@@ -113,7 +113,7 @@ const proofImages = [
 
 export default function TestimonialsSection() {
   return (
-    <section style={{ background: '#1C1008', padding: '96px 24px' }}>
+    <section style={{ background: 'var(--bg-light)', padding: '96px 24px' }}>
       <div style={{ maxWidth: 900, margin: '0 auto', textAlign: 'center' }}>
 
         <motion.p
@@ -121,7 +121,7 @@ export default function TestimonialsSection() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.6 }}
-          style={{ fontSize: 12, fontWeight: 600, letterSpacing: '0.28em', textTransform: 'uppercase', color: 'var(--copper-light)', marginBottom: 16 }}
+          style={{ fontSize: 12, fontWeight: 600, letterSpacing: '0.28em', textTransform: 'uppercase', color: 'var(--copper)', marginBottom: 16 }}
         >
           אפשר לראות את התוצאות בלייב
         </motion.p>
@@ -131,7 +131,7 @@ export default function TestimonialsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          style={{ fontSize: 'clamp(1.8rem, 4.5vw, 2.8rem)', fontWeight: 900, color: '#F5EDE4', lineHeight: 1.25, marginBottom: 20 }}
+          style={{ fontSize: 'clamp(1.8rem, 4.5vw, 2.8rem)', fontWeight: 900, color: 'var(--text-dark)', lineHeight: 1.25, marginBottom: 20, direction: 'rtl' }}
         >
           מה אומרות הנשים
           <br />

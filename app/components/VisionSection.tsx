@@ -31,7 +31,7 @@ const items = [
 
 export default function VisionSection() {
   return (
-    <section style={{ background: '#1C1008', padding: '96px 24px' }}>
+    <section style={{ background: 'var(--bg-taupe)', padding: '96px 24px' }}>
       <div style={{ maxWidth: 900, margin: '0 auto', textAlign: 'center' }}>
 
         {/* Eyebrow */}
@@ -45,7 +45,7 @@ export default function VisionSection() {
             fontWeight: 600,
             letterSpacing: '0.28em',
             textTransform: 'uppercase',
-            color: 'var(--copper-light)',
+            color: 'var(--copper)',
             marginBottom: 16,
           }}
         >
@@ -61,7 +61,7 @@ export default function VisionSection() {
           style={{
             fontSize: 'clamp(1.8rem, 4.5vw, 2.8rem)',
             fontWeight: 900,
-            color: '#F5EDE4',
+            color: 'var(--text-dark)',
             lineHeight: 1.25,
             marginBottom: 20,
           }}
@@ -96,16 +96,17 @@ export default function VisionSection() {
               viewport={{ once: true, margin: '-60px' }}
               transition={{ duration: 0.65, delay: i * 0.12 + 0.3, ease: [0.22, 1, 0.36, 1] }}
               style={{
-                background: 'rgba(255,255,255,0.04)',
-                border: '1.5px solid rgba(196,112,74,0.2)',
+                background: '#FFFFFF',
+                border: '1.5px solid rgba(196,112,74,0.18)',
                 borderRadius: 20,
                 padding: '28px 24px',
                 borderRight: '3px solid var(--copper)',
+                boxShadow: '0 2px 16px rgba(28,16,8,0.06)',
               }}
             >
               <div style={{
                 fontSize: 28,
-                color: 'var(--copper-light)',
+                color: 'var(--copper)',
                 marginBottom: 12,
                 lineHeight: 1,
               }}>
@@ -114,14 +115,14 @@ export default function VisionSection() {
               <h3 style={{
                 fontSize: '1.15rem',
                 fontWeight: 800,
-                color: '#F0E8DF',
+                color: 'var(--text-dark)',
                 marginBottom: 10,
               }}>
                 {item.label}
               </h3>
               <p style={{
                 fontSize: '0.95rem',
-                color: '#A89080',
+                color: 'var(--text-medium)',
                 lineHeight: 1.8,
                 marginBottom: 10,
               }}>
