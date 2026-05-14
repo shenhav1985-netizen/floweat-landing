@@ -197,7 +197,7 @@ export default function HeroSection() {
             lineHeight: 1.8,
             marginBottom: 10,
           }}>
-            בעזרת שיטה שמשלבת תזונה מדויקת יחד עם תודעת שחרור ומכילה
+            בעזרת שיטה שמשלבת תזונה איכותית יחד עם תודעת שחרור
           </motion.p>
 
           <motion.p {...fadeIn(0.72)} style={{
