@@ -187,7 +187,7 @@ export default function HeroSection() {
             10 שבועות שמנתקים את התלות באוכל מהשורש
             <br />
             <span style={{ color: 'var(--copper)', fontWeight: 700 }}>
-              ויוצאים מהלופ של דיאטות, לתמיד.
+              אנחנו יוצאות מהלופ של דיאטות לתמיד
             </span>
           </motion.h1>
 
