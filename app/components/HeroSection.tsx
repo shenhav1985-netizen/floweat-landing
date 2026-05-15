@@ -59,6 +59,40 @@ export default function HeroSection() {
         {/* ── TEXT COLUMN ── */}
         <div style={{ textAlign: 'center' }} className="hero-text">
 
+          {/* ★ BRAND NAME — first thing seen */}
+          <motion.div {...fadeUp(0)} style={{ marginBottom: 8 }}>
+            <span style={{
+              display: 'block',
+              fontFamily: '"Playfair Display", "David Libre", Georgia, serif',
+              fontWeight: 900,
+              fontSize: 'clamp(2.8rem, 10vw, 7rem)',
+              lineHeight: 1.05,
+              letterSpacing: '-0.01em',
+              background: 'linear-gradient(135deg, #8B3D1E 0%, #C4704A 30%, #E8A070 55%, #C4704A 75%, #8B3D1E 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              filter: 'drop-shadow(0 2px 12px rgba(196,112,74,0.18))',
+            }}>
+              מעדכנות גרסה
+            </span>
+          </motion.div>
+
+          {/* by שנהב */}
+          <motion.div {...fadeIn(0.15)} style={{
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            gap: 14, marginBottom: 32,
+          }}>
+            <span style={{ flex: 1, height: 1, background: 'rgba(196,112,74,0.22)' }} />
+            <span style={{
+              fontSize: 11, fontWeight: 600, letterSpacing: '0.28em',
+              color: 'var(--copper)', textTransform: 'uppercase', whiteSpace: 'nowrap',
+            }}>
+              by שנהב בנימין
+            </span>
+            <span style={{ flex: 1, height: 1, background: 'rgba(196,112,74,0.22)' }} />
+          </motion.div>
+
           {/* Top line */}
           <motion.div
             initial={{ scaleX: 0 }} animate={{ scaleX: 1 }}
@@ -71,7 +105,7 @@ export default function HeroSection() {
           />
 
           {/* ★ HOOK */}
-          <motion.div {...fadeUp(0)} style={{ marginBottom: 28 }}>
+          <motion.div {...fadeUp(0.25)} style={{ marginBottom: 28 }}>
             {/* כאב */}
             <p style={{
               fontSize: 'clamp(1rem, 2.4vw, 1.2rem)',
@@ -143,38 +177,6 @@ export default function HeroSection() {
             className="copper-divider"
             style={{ marginBottom: 24 }}
           />
-
-          {/* Brand name */}
-          <motion.div {...fadeUp(0.2)} style={{ padding: '0 8px', marginBottom: 10 }}>
-            <span style={{
-              display: 'block',
-              fontFamily: 'Heebo, sans-serif',
-              fontWeight: 900,
-              fontSize: 'clamp(2rem, 8vw, 5.5rem)',
-              lineHeight: 1.1,
-              background: 'linear-gradient(135deg, #A05A36 0%, #C4704A 35%, #E8A070 60%, #C4704A 80%, #8B3D1E 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-            }}>
-              מעדכנות גרסה
-            </span>
-          </motion.div>
-
-          {/* by שנהב */}
-          <motion.div {...fadeIn(0.38)} style={{
-            display: 'flex', alignItems: 'center', justifyContent: 'center',
-            gap: 14, marginBottom: 28,
-          }}>
-            <span style={{ flex: 1, height: 1, background: 'rgba(196,112,74,0.22)' }} />
-            <span style={{
-              fontSize: 11, fontWeight: 600, letterSpacing: '0.28em',
-              color: 'var(--copper)', textTransform: 'uppercase', whiteSpace: 'nowrap',
-            }}>
-              by שנהב בנימין
-            </span>
-            <span style={{ flex: 1, height: 1, background: 'rgba(196,112,74,0.22)' }} />
-          </motion.div>
 
           {/* Main promise */}
           <motion.h1 {...fadeUp(0.5)} style={{
