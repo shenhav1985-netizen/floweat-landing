@@ -3,6 +3,8 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
+const WA_URL = `https://wa.me/972506409478?text=${encodeURIComponent('היי שנהב, אני רוצה לבדוק אם התהליך מתאים לי')}`;
+
 type Segment = { text: string; highlight?: boolean };
 
 const bubbles: { segments: Segment[]; time: string; name: string }[] = [
@@ -185,6 +187,29 @@ export default function TestimonialsSection() {
               />
             </motion.div>
           ))}
+        </motion.div>
+
+        {/* CTA after testimonials */}
+        <motion.div
+          initial={{ opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          style={{ textAlign: 'center', marginTop: 44 }}
+        >
+          <motion.a
+            href={WA_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cta-btn"
+            whileHover={{ scale: 1.04, y: -2 }}
+            whileTap={{ scale: 0.97 }}
+          >
+            גם אני רוצה שקט מהאוכל ←
+          </motion.a>
+          <p style={{ marginTop: 12, fontSize: 13, color: 'var(--text-light)', letterSpacing: '0.02em' }}>
+            ✓ בחינם וללא התחייבות
+          </p>
         </motion.div>
 
       </div>

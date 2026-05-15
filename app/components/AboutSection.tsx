@@ -3,6 +3,8 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
+const WA_URL = `https://wa.me/972506409478?text=${encodeURIComponent('היי שנהב, אני רוצה לבדוק אם התהליך מתאים לי')}`;
+
 const story = [
   { text: 'אני יודעת בדיוק איך זה מרגיש כשהאוכל הוא לא דלק, אלא המנהל שלך.' },
   { text: 'אם את בלחץ? האוכל מרגיע. אם את חוגגת? האוכל הוא המסיבה. אם את עייפה? האוכל הוא הנחמה.' },
@@ -25,6 +27,26 @@ export default function AboutSection() {
       overflow: 'hidden',
     }}>
       <div style={{ maxWidth: 720, margin: '0 auto', textAlign: 'center' }}>
+
+        {/* CTA top */}
+        <motion.div
+          initial={{ opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.7 }}
+          style={{ marginBottom: 40 }}
+        >
+          <motion.a
+            href={WA_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cta-btn"
+            whileHover={{ scale: 1.04, y: -2 }}
+            whileTap={{ scale: 0.97 }}
+          >
+            גם אני רוצה שקט מהאוכל ←
+          </motion.a>
+        </motion.div>
 
         {/* Eyebrow */}
         <motion.p
