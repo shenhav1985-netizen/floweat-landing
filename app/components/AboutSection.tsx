@@ -78,8 +78,8 @@ export default function AboutSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.25 }}
           style={{
-            width: 'min(320px, 88vw)',
-            height: 'min(240px, 66vw)',
+            width: 'min(300px, 80vw)',
+            height: 'min(400px, 107vw)',
             borderRadius: 24,
             overflow: 'hidden',
             border: '3px solid rgba(196,112,74,0.4)',
@@ -89,10 +89,10 @@ export default function AboutSection() {
           }}
         >
           <Image
-            src="/images/about.jpg"
+            src="/images/hero4.png"
             alt="שנהב בנימין"
             fill
-            style={{ objectFit: 'cover', objectPosition: '50% 20%' }}
+            style={{ objectFit: 'cover', objectPosition: '50% 10%' }}
           />
         </motion.div>
 
