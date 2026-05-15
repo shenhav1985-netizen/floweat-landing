@@ -111,7 +111,7 @@ export default function AboutSection() {
           }}
         >
           <Image
-            src="/images/hero2-about.jpg"
+            src="/images/hero5.png"
             alt="שנהב בנימין"
             fill
             style={{ objectFit: 'cover', objectPosition: '50% 10%' }}

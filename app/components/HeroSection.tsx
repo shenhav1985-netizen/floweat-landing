@@ -286,7 +286,7 @@ export default function HeroSection() {
           {/* Image */}
           <div style={{ position: 'relative', zIndex: 1, width: '100%', maxWidth: 380 }}>
             <Image
-              src="/images/hero5.png"
+              src="/images/hero2-about.jpg"
               alt="שנהב בנימין"
               width={380}
               height={520}
