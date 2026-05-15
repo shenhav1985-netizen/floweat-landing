@@ -238,7 +238,7 @@ export default function FinalCTASection() {
           }}
         >
           <Image
-            src="/images/hero5.jpeg"
+            src="/images/hero5.png"
             alt="שנהב בנימין"
             fill
             style={{ objectFit: 'cover', objectPosition: '50% 15%' }}
