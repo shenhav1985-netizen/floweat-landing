@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function FinalCTASection() {
   const [name, setName] = useState('');
@@ -214,10 +215,35 @@ export default function FinalCTASection() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          style={{ fontSize: '0.93rem', fontStyle: 'italic', color: 'var(--text-medium)' }}
+          style={{ fontSize: '0.93rem', fontStyle: 'italic', color: 'var(--text-medium)', marginBottom: 36 }}
         >
           "כי ברגע שהראש משתחרר — הגוף מפסיק לאגור את מה שהוא לא צריך."
         </motion.p>
+
+        {/* Closing photo */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.94 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.9 }}
+          style={{
+            width: 'min(380px, 90vw)',
+            height: 'min(480px, 114vw)',
+            borderRadius: 28,
+            overflow: 'hidden',
+            margin: '0 auto',
+            position: 'relative',
+            border: '3px solid rgba(196,112,74,0.35)',
+            boxShadow: '0 12px 48px rgba(28,16,8,0.16)',
+          }}
+        >
+          <Image
+            src="/images/hero5.jpeg"
+            alt="שנהב בנימין"
+            fill
+            style={{ objectFit: 'cover', objectPosition: '50% 15%' }}
+          />
+        </motion.div>
 
       </div>
     </section>
