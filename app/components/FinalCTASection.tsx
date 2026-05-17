@@ -126,6 +126,68 @@ export default function FinalCTASection() {
           כדי לבדוק אם התהליך מתאים לך בשלב הזה.
         </motion.p>
 
+        {/* Pricing block */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.35 }}
+          style={{
+            background: 'rgba(255,255,255,0.55)',
+            border: '1.5px solid rgba(196,112,74,0.3)',
+            borderRadius: 20,
+            padding: '24px 28px',
+            marginBottom: 28,
+            textAlign: 'center',
+          }}
+        >
+          {/* Early bird badge */}
+          <div style={{
+            display: 'inline-block',
+            background: 'linear-gradient(135deg, var(--copper-light), var(--copper-dark))',
+            color: '#fff',
+            fontSize: 12,
+            fontWeight: 700,
+            letterSpacing: '0.12em',
+            padding: '5px 16px',
+            borderRadius: 9999,
+            marginBottom: 16,
+          }}>
+            מחיר השקה
+          </div>
+
+          {/* Price */}
+          <div style={{ marginBottom: 12 }}>
+            <span style={{
+              fontSize: 'clamp(2.2rem, 7vw, 3.2rem)',
+              fontWeight: 900,
+              color: 'var(--text-dark)',
+              lineHeight: 1,
+            }}>2,500 ₪</span>
+            <span style={{ fontSize: '0.95rem', color: 'var(--text-medium)', marginRight: 8 }}>
+              תשלום אחד
+            </span>
+          </div>
+
+          {/* Installments */}
+          <p style={{ fontSize: '0.95rem', color: 'var(--text-medium)', marginBottom: 16 }}>
+            או <strong style={{ color: 'var(--text-dark)' }}>250 ₪ × 10</strong> תשלומים
+          </p>
+
+          {/* Urgency */}
+          <div style={{
+            background: 'rgba(196,112,74,0.1)',
+            border: '1px solid rgba(196,112,74,0.25)',
+            borderRadius: 12,
+            padding: '10px 16px',
+            fontSize: '0.88rem',
+            color: 'var(--copper-dark)',
+            fontWeight: 600,
+          }}>
+            החל מ-7.6 המחיר עולה ל-2,800 ₪ (280 × 10)
+          </div>
+        </motion.div>
+
         {/* Form */}
         <motion.form
           onSubmit={handleSubmit}

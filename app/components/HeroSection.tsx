@@ -199,7 +199,7 @@ export default function HeroSection() {
             lineHeight: 1.8,
             marginBottom: 10,
           }}>
-            בעזרת שיטה שמשלבת תזונה איכותית יחד עם תודעת שחרור
+            בעזרת שיטה שמשלבת תזונה איכותית ושחרור מהמאבק עם האוכל
           </motion.p>
 
           <motion.p {...fadeIn(0.72)} style={{
