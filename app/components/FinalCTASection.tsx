@@ -164,9 +164,6 @@ export default function FinalCTASection() {
               color: 'var(--text-dark)',
               lineHeight: 1,
             }}>2,500 ₪</span>
-            <span style={{ fontSize: '0.95rem', color: 'var(--text-medium)', marginRight: 8 }}>
-              תשלום אחד
-            </span>
           </div>
 
           {/* Installments */}
