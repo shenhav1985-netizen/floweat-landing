@@ -30,7 +30,7 @@ export default function HeroSection() {
     }}>
       {/* Warm radial glow */}
       <div style={{
-        position: 'absolute', top: '15%', right: '-8%',
+        position: 'absolute', top: '45%', right: '-8%',
         width: '60vw', maxWidth: 520, height: '60vw', maxHeight: 520,
         background: 'radial-gradient(ellipse, rgba(196,112,74,0.12) 0%, transparent 65%)',
         pointerEvents: 'none',
