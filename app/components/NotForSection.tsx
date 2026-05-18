@@ -135,7 +135,7 @@ export default function NotForSection() {
                 fontWeight: 700,
                 flexShrink: 0,
               }}>✕</span>
-              <h3 style={{ fontSize: '1rem', fontWeight: 700, color: '#F0E8DF' }}>אבל זה לא מתאים אם...</h3>
+              <h3 style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--text-dark)' }}>אבל זה לא מתאים אם...</h3>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
               {notFor.map((item, i) => (
