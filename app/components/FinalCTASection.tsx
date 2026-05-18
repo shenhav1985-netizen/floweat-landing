@@ -180,9 +180,21 @@ export default function FinalCTASection() {
             fontSize: '0.88rem',
             color: 'var(--copper-dark)',
             fontWeight: 600,
+            marginBottom: 20,
           }}>
             החל מ-7.6 המחיר עולה ל-2,800 ₪ (280 × 10)
           </div>
+
+          {/* Payment button */}
+          <a
+            href="https://secure.cardcom.solutions/EA/EA5/3HhLIY3cpUWVcUMQDdMTcA/PaymentSP"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cta-btn"
+            style={{ display: 'inline-block', fontSize: 16, padding: '14px 40px' }}
+          >
+            לרכישה עכשיו ←
+          </a>
         </motion.div>
 
         {/* Form */}
