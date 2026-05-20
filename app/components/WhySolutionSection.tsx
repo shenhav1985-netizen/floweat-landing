@@ -144,7 +144,7 @@ export default function WhySolutionSection() {
           }}>
             <strong style={{ color: 'var(--text-dark)' }}>שחרור הדפוסים שמחזירים אותך אחורה.</strong>
             <br />
-            היכרות עם מה שגורם לך לאכול מתוך רגש, ובניית כלים שמחזיקים גם ביום קשה.
+            צלילה לתוך המאבק השקט סביב האוכל ואיך נוכל לעבוד איתו.
           </p>
 
           <p style={{
