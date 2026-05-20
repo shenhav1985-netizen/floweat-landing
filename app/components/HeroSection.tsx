@@ -234,8 +234,8 @@ export default function HeroSection() {
           </motion.p>
 
           <motion.p {...fadeIn(1.1)} style={{
-            marginTop: 8, fontSize: 13, fontWeight: 700,
-            color: 'var(--copper-dark)', letterSpacing: '0.02em',
+            marginTop: 10, fontSize: 16, fontWeight: 800,
+            color: 'var(--copper-dark)', letterSpacing: '0.03em',
           }}>
             התוכנית מתחילה ב-16/6
           </motion.p>
