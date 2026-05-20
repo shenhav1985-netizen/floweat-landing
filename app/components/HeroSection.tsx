@@ -59,7 +59,7 @@ export default function HeroSection() {
         {/* ── TEXT COLUMN ── */}
         <div style={{ textAlign: 'center' }} className="hero-text">
 
-          {/* ★ BRAND NAME — first thing seen */}
+          {/* ★ BRAND NAME */}
           <motion.div {...fadeUp(0)} style={{ marginBottom: 8 }}>
             <span style={{
               display: 'block',
@@ -104,9 +104,8 @@ export default function HeroSection() {
             }}
           />
 
-          {/* ★ HOOK */}
+          {/* HOOK */}
           <motion.div {...fadeUp(0.25)} style={{ marginBottom: 28 }}>
-            {/* כאב */}
             <p style={{
               fontSize: 'clamp(1rem, 2.4vw, 1.2rem)',
               fontWeight: 700,
@@ -136,15 +135,12 @@ export default function HeroSection() {
               וכל נפילה היא אכזבה.
             </p>
 
-            {/* קו הפרדה */}
             <div style={{
-              width: 40,
-              height: 1,
+              width: 40, height: 1,
               background: 'rgba(196,112,74,0.35)',
               margin: '0 auto 24px',
             }} />
 
-            {/* פתרון */}
             <p style={{
               fontSize: 'clamp(0.95rem, 2.1vw, 1.05rem)',
               fontWeight: 400,
@@ -204,15 +200,6 @@ export default function HeroSection() {
             בעזרת שיטה שמשלבת תזונה איכותית ושחרור מהמאבק עם האוכל
           </motion.p>
 
-          <motion.p {...fadeIn(0.72)} style={{
-            fontSize: '0.97rem',
-            color: 'var(--copper)',
-            marginBottom: 28,
-            fontWeight: 600,
-          }}>
-            נשים שעברו את התהליך ירדו בממוצע 8-12 קילו — בלי דיאטה, בלי ספירת קלוריות, ובלי לחזור אחורה.
-          </motion.p>
-
           {/* CTA */}
           <motion.div {...fadeUp(0.85)}>
             <motion.a
@@ -265,7 +252,6 @@ export default function HeroSection() {
             alignItems: 'flex-end',
           }}
         >
-          {/* Decorative copper ring */}
           <div style={{
             position: 'absolute', bottom: 0, left: '50%',
             transform: 'translateX(-50%)',
@@ -276,7 +262,6 @@ export default function HeroSection() {
             zIndex: 0,
           }} />
 
-          {/* Corner accents */}
           <div style={{
             position: 'absolute', top: '12%', right: '8%',
             width: 48, height: 48,
@@ -292,7 +277,6 @@ export default function HeroSection() {
             borderRadius: '0 0 0 8px', zIndex: 2,
           }} />
 
-          {/* Image */}
           <div style={{ position: 'relative', zIndex: 1, width: '100%', maxWidth: 380 }}>
             <Image
               src="/images/hero2-about.jpg"
