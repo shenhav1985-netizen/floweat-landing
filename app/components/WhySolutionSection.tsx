@@ -15,7 +15,7 @@ export default function WhySolutionSection() {
       <div style={{ maxWidth: 640, margin: '0 auto' }}>
 
         {/* Why it fails */}
-        <motion.div {...fadeUp(0)} style={{ textAlign: 'right', marginBottom: 40 }}>
+        <motion.div {...fadeUp(0)} style={{ textAlign: 'center', marginBottom: 40 }}>
           <p style={{
             fontSize: 12,
             fontWeight: 600,
@@ -49,8 +49,6 @@ export default function WhySolutionSection() {
             הן אמרו לך מה לאכול ומה לא.
             <br />
             אבל לא ראו אותך.
-            <br />
-            לא שאלו למה את חוזרת לאוכל ברגע של לחץ, עייפות או בדידות.
           </p>
 
           <p style={{
@@ -72,7 +70,7 @@ export default function WhySolutionSection() {
             border: '1.5px solid rgba(196,112,74,0.25)',
             borderRadius: 20,
             padding: '28px 28px',
-            textAlign: 'right',
+            textAlign: 'center',
             marginBottom: 40,
           }}
         >
@@ -83,7 +81,7 @@ export default function WhySolutionSection() {
             lineHeight: 1.7,
             marginBottom: 12,
           }}>
-            הגוף והנפש הן מערכת אחת.
+            גוף ונפש הן מערכת אחת.
           </p>
           <p style={{
             fontSize: 'clamp(0.97rem, 2.2vw, 1.05rem)',
@@ -105,7 +103,7 @@ export default function WhySolutionSection() {
         />
 
         {/* The solution */}
-        <motion.div {...fadeUp(0.35)} style={{ textAlign: 'right' }}>
+        <motion.div {...fadeUp(0.35)} style={{ textAlign: 'center' }}>
           <p style={{
             fontSize: 12,
             fontWeight: 600,

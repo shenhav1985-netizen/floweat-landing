@@ -36,7 +36,7 @@ export default function PainStorySection() {
         </motion.p>
 
         {/* The story — Shenhav's text, formatted */}
-        <motion.div {...fadeUp(0.1)} style={{ textAlign: 'right', marginBottom: 36 }}>
+        <motion.div {...fadeUp(0.1)} style={{ textAlign: 'center', marginBottom: 36 }}>
           <p style={{
             fontSize: 'clamp(1.05rem, 2.4vw, 1.2rem)',
             fontWeight: 700,
@@ -118,7 +118,7 @@ export default function PainStorySection() {
           textAlign: 'center',
           marginBottom: 24,
         }}>
-          נשים רבות מגיעות אליי ואומרות:
+          אלו היו המשפטים הקבועים שלי:
         </motion.p>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
@@ -149,6 +149,47 @@ export default function PainStorySection() {
             </motion.div>
           ))}
         </div>
+
+        {/* Enthusiastic bridge */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.9 }}
+          style={{ textAlign: 'center', marginTop: 44 }}
+        >
+          <p style={{
+            fontSize: 'clamp(1.1rem, 2.8vw, 1.4rem)',
+            fontWeight: 800,
+            color: 'var(--text-dark)',
+            lineHeight: 1.7,
+            marginBottom: 12,
+          }}>
+            זה בדיוק מה שאנחנו עושות כאן.
+          </p>
+          <p style={{
+            fontSize: 'clamp(1rem, 2.4vw, 1.25rem)',
+            fontWeight: 700,
+            color: 'var(--copper)',
+            lineHeight: 1.6,
+            marginBottom: 20,
+          }}>
+            12 שבועות שמנתקים את לופ הדיאטות.
+          </p>
+          <p style={{
+            display: 'inline-block',
+            fontSize: 'clamp(1.1rem, 2.8vw, 1.4rem)',
+            fontWeight: 900,
+            color: 'var(--copper-dark)',
+            letterSpacing: '0.04em',
+            background: 'rgba(196,112,74,0.09)',
+            border: '2px solid rgba(196,112,74,0.3)',
+            borderRadius: 12,
+            padding: '10px 28px',
+          }}>
+            התוכנית מתחילה ב-16/6
+          </p>
+        </motion.div>
 
       </div>
     </section>
