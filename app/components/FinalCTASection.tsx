@@ -159,7 +159,7 @@ export default function FinalCTASection() {
           {/* Price */}
           <div style={{ marginBottom: 12 }}>
             <span style={{
-              fontSize: 'clamp(2.2rem, 7vw, 3.2rem)',
+              fontSize: 'clamp(1.6rem, 4vw, 2.2rem)',
               fontWeight: 900,
               color: 'var(--text-dark)',
               lineHeight: 1,

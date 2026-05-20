@@ -1,7 +1,6 @@
 'use client';
 
-import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { motion } from 'framer-motion';
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 22 },
@@ -11,8 +10,6 @@ const fadeUp = (delay = 0) => ({
 });
 
 export default function PainSection() {
-  const ref = useRef<HTMLDivElement>(null);
-
   return (
     <section style={{
       background: 'var(--bg-light)',
@@ -20,17 +17,7 @@ export default function PainSection() {
       position: 'relative',
       overflow: 'hidden',
     }}>
-      {/* Subtle background image */}
-      <div style={{
-        position: 'absolute', inset: 0,
-        backgroundImage: 'url(/images/hero3.jpg)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center top',
-        opacity: 0.15,
-        mixBlendMode: 'luminosity',
-        pointerEvents: 'none',
-      }} />
-      <div ref={ref} style={{ maxWidth: 680, margin: '0 auto', textAlign: 'center' }}>
+      <div style={{ maxWidth: 660, margin: '0 auto', textAlign: 'center' }}>
 
         {/* Eyebrow */}
         <motion.p {...fadeUp(0)} style={{
@@ -44,30 +31,45 @@ export default function PainSection() {
           את לא לבד בזה
         </motion.p>
 
-        {/* Main headline */}
+        {/* Headline */}
         <motion.h2 {...fadeUp(0.1)} style={{
-          fontSize: 'clamp(1.9rem, 5vw, 3rem)',
+          fontSize: 'clamp(1.7rem, 4.5vw, 2.6rem)',
           fontWeight: 900,
           color: 'var(--text-dark)',
-          lineHeight: 1.25,
-          marginBottom: 16,
+          lineHeight: 1.3,
+          marginBottom: 32,
         }}>
-          הגיע הזמן לנצח את דפוסי האכילה
+          ככל שאנחנו מתקדמות בגיל
           <br />
-          <span style={{ color: 'var(--copper)' }}>ולבנות הרגלים חדשים מהשורש</span>
+          <span style={{ color: 'var(--copper)' }}>הגוף מבקש משהו אחר</span>
         </motion.h2>
 
-        <motion.p {...fadeUp(0.22)} style={{
-          fontSize: 'clamp(1rem, 2.2vw, 1.15rem)',
-          color: 'var(--text-brown)',
-          lineHeight: 1.85,
-          fontWeight: 600,
-          marginBottom: 28,
+        {/* Body text */}
+        <motion.div {...fadeUp(0.22)} style={{
+          fontSize: 'clamp(1rem, 2.2vw, 1.1rem)',
+          color: 'var(--text-medium)',
+          lineHeight: 2,
+          marginBottom: 32,
+          textAlign: 'right',
         }}>
-          שעובדים בשבילך גם כשאין לך כוח, זמן או חשק.
-          <br />
-          תהליך אחד מדויק שמחזיק שגרה, נראות חיצונית ואורח חיים לאורך זמן.
-        </motion.p>
+          <p style={{ marginBottom: 16 }}>
+            הגוף עובד אחרת. מתנהג שונה. ומה שעבד לפני עשר שנים
+            <br />
+            פשוט לא עובד היום.
+          </p>
+          <p style={{ marginBottom: 16 }}>
+            והאמת? הוא צודק.
+            <br />
+            הוא לא רוצה עוד מלחמה.
+            <br />
+            הוא רוצה אוכל שמחייה אותו, שמעורר אותו, שמטפח אותו.
+          </p>
+          <p style={{ fontWeight: 700, color: 'var(--text-dark)' }}>
+            הגוף עייף ממאבק.
+            <br />
+            הוא לא צריך אויב — הוא צריך אותך איתו.
+          </p>
+        </motion.div>
 
         {/* Divider */}
         <motion.div
@@ -76,23 +78,29 @@ export default function PainSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.3 }}
           className="copper-divider"
-          style={{ marginBottom: 24 }}
+          style={{ marginBottom: 32 }}
         />
 
-        <motion.p {...fadeUp(0.42)} style={{
-          fontSize: 'clamp(1rem, 2.2vw, 1.15rem)',
+        {/* Return love */}
+        <motion.div {...fadeUp(0.42)} style={{
+          fontSize: 'clamp(1rem, 2.2vw, 1.1rem)',
           color: 'var(--text-medium)',
-          lineHeight: 1.85,
+          lineHeight: 2,
+          textAlign: 'right',
         }}>
-          לא עוד תהליך שמתחיל בהתלהבות ונגמר בעייפות.
-          <br />
-          לא עוד ליווי שדורש ממך להיות{' '}
-          <strong style={{ color: 'var(--text-brown)' }}>"חזקה"</strong>,{' '}
-          <strong style={{ color: 'var(--text-brown)' }}>"ממושמעת"</strong>
-          {' '}או{' '}
-          <strong style={{ color: 'var(--text-brown)' }}>"יותר בעניין"</strong>
-          {' '}ולא עוד הבטחה לשינוי חיצוני שמתרסק על החיים האמיתיים שלך באמצע שבוע עמוס.
-        </motion.p>
+          <p style={{ marginBottom: 16 }}>
+            כשהוא מקבל את זה —
+            <br />
+            הוא מחזיר לך אהבה פי שניים.
+          </p>
+          <p style={{
+            fontWeight: 700,
+            color: 'var(--text-dark)',
+            fontSize: 'clamp(1.05rem, 2.4vw, 1.2rem)',
+          }}>
+            במראה. במשקל. ובעור הפנים.
+          </p>
+        </motion.div>
 
       </div>
     </section>

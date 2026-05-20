@@ -81,6 +81,39 @@ export default function VisionSection() {
           style={{ marginBottom: 52 }}
         />
 
+        {/* Vision intro */}
+        <motion.div
+          initial={{ opacity: 0, y: 18 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.7, delay: 0.25 }}
+          style={{
+            fontSize: 'clamp(1rem, 2.3vw, 1.15rem)',
+            color: 'var(--text-medium)',
+            lineHeight: 1.95,
+            textAlign: 'right',
+            marginBottom: 48,
+          }}
+        >
+          <p style={{ marginBottom: 14 }}>
+            ואישה שמצליחה לעדכן גרסה? היא לא רק יורדת במשקל.
+            <br />
+            היא הופכת למשהו אחר לגמרי.
+          </p>
+          <p style={{ marginBottom: 14 }}>
+            מגנט של אנרגיה, חיוניות ושמחה.
+            <br />
+            של נראות שמגיעה מבפנים.
+          </p>
+          <p style={{ fontWeight: 700, color: 'var(--text-dark)' }}>
+            והיא משפיעה על כל הסובבים אותה.
+            <br />
+            ילדים, בן זוג, חברות.
+            <br />
+            כי כשאת שלמה עם עצמך, כולם מסביבך מרגישים את זה.
+          </p>
+        </motion.div>
+
         {/* Cards */}
         <div style={{
           display: 'grid',
