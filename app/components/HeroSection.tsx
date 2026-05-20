@@ -158,7 +158,7 @@ export default function HeroSection() {
               <br />
               בלי חרטה. בלי חשבון. בלי הקול הזה בראש.
               <br />
-              <span style={{ color: 'var(--copper-dark)', fontWeight: 600 }}>ועם תזונה שמחיה את הגוף, לא נלחמת בו.</span>
+              <span style={{ color: 'var(--copper-dark)', fontWeight: 600 }}>ועם תזונה שמחייה את הגוף, לא נלחמת בו.</span>
             </p>
             <p style={{
               fontSize: 'clamp(1rem, 2.3vw, 1.15rem)',
@@ -231,6 +231,13 @@ export default function HeroSection() {
             marginTop: 12, fontSize: 13, color: 'var(--text-light)', letterSpacing: '0.02em',
           }}>
             ✓ בחינם וללא התחייבות
+          </motion.p>
+
+          <motion.p {...fadeIn(1.1)} style={{
+            marginTop: 8, fontSize: 13, fontWeight: 700,
+            color: 'var(--copper-dark)', letterSpacing: '0.02em',
+          }}>
+            התוכנית מתחילה ב-16/6
           </motion.p>
 
           {/* Bottom line */}
