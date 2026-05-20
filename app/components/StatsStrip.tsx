@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 
 const stats = [
-  { number: '8–12 ק"ג', label: 'ירידה ממוצעת ב-10 שבועות' },
+  { number: '8–12 ק"ג', label: 'ירידה ממוצעת ב-12 שבועות' },
   { number: '0', label: 'תפריטים, ספירת קלוריות או איסורים' },
   { number: 'לתמיד', label: 'לא חוזרות לנקודת ההתחלה' },
 ];

@@ -169,18 +169,6 @@ export default function AboutSection() {
             </p>
           </motion.div>
 
-          {story2.map((s, i) => (
-            <motion.p
-              key={`b${i}`}
-              initial={{ opacity: 0, y: 14 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.1 + 0.9 }}
-              style={{ fontSize: '0.97rem', color: 'var(--text-brown)', lineHeight: 1.85 }}
-            >
-              {s.text}
-            </motion.p>
-          ))}
         </div>
 
         {/* Quote */}

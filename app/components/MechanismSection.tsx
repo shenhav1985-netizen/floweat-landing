@@ -64,7 +64,7 @@ export default function MechanismSection() {
           transition={{ duration: 0.6, delay: 0.2 }}
           style={{ fontSize: '1rem', color: 'var(--text-medium)', marginBottom: 20 }}
         >
-          ב-10 שבועות אנחנו מתקינות לך מערכת הפעלה חדשה.
+          ב-12 שבועות אנחנו מתקינות לך מערכת הפעלה חדשה.
         </motion.p>
 
         <motion.div

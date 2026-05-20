@@ -157,6 +157,8 @@ export default function HeroSection() {
               שאוכלות ועוברות הלאה.
               <br />
               בלי חרטה. בלי חשבון. בלי הקול הזה בראש.
+              <br />
+              <span style={{ color: 'var(--copper-dark)', fontWeight: 600 }}>ועם תזונה שמחיה את הגוף, לא נלחמת בו.</span>
             </p>
             <p style={{
               fontSize: 'clamp(1rem, 2.3vw, 1.15rem)',
@@ -186,10 +188,10 @@ export default function HeroSection() {
             fontWeight: 900,
             marginBottom: 14,
           }}>
-            10 שבועות שמנתקים את התלות באוכל מהשורש
+            12 שבועות שמנתקים את התלות באוכל מהשורש
             <br />
             <span style={{ color: 'var(--copper)', fontWeight: 700 }}>
-              אנחנו יוצאות מהלופ של דיאטות לתמיד
+              אנחנו יוצאות מהלופ של דיאטות
             </span>
           </motion.h1>
 

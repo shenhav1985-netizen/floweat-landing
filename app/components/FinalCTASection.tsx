@@ -182,7 +182,9 @@ export default function FinalCTASection() {
             fontWeight: 600,
             marginBottom: 20,
           }}>
-            החל מ-7.6 המחיר עולה ל-2,800 ₪ (280 × 10)
+            התוכנית מתחילה ב-16.6
+            <br />
+            החל מ-7.6 המחיר עולה ל-3,000 ₪ (300 × 10)
           </div>
 
           {/* Payment button */}
