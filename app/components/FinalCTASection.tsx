@@ -146,10 +146,10 @@ export default function FinalCTASection() {
             display: 'inline-block',
             background: 'linear-gradient(135deg, var(--copper-light), var(--copper-dark))',
             color: '#fff',
-            fontSize: 12,
-            fontWeight: 700,
-            letterSpacing: '0.12em',
-            padding: '5px 16px',
+            fontSize: 'clamp(1rem, 2.5vw, 1.3rem)',
+            fontWeight: 800,
+            letterSpacing: '0.08em',
+            padding: '8px 24px',
             borderRadius: 9999,
             marginBottom: 16,
           }}>
@@ -159,8 +159,8 @@ export default function FinalCTASection() {
           {/* Price */}
           <div style={{ marginBottom: 12 }}>
             <span style={{
-              fontSize: 'clamp(1.6rem, 4vw, 2.2rem)',
-              fontWeight: 900,
+              fontSize: 'clamp(1.1rem, 2.5vw, 1.4rem)',
+              fontWeight: 700,
               color: 'var(--text-dark)',
               lineHeight: 1,
             }}>2,500 ₪</span>
