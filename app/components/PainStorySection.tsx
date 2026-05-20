@@ -119,7 +119,7 @@ export default function PainStorySection() {
           textAlign: 'center',
           marginBottom: 24,
         }}>
-          אלו היו המשפטים הקבועים שלי:
+          אלו היו המשפטים הקבועים שלי. מזדהה?
         </motion.p>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
