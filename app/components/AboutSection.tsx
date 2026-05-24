@@ -129,7 +129,7 @@ export default function AboutSection() {
         />
 
         {/* Story */}
-        <div style={{ textAlign: 'right', display: 'flex', flexDirection: 'column', gap: 16 }}>
+        <div style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', gap: 24 }}>
           {story.map((s, i) => (
             <motion.p
               key={i}

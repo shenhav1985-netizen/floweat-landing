@@ -45,7 +45,7 @@ export default function PainStorySection() {
             lineHeight: 1.9,
             marginBottom: 20,
           }}>
-            כל יום ראשון היא החלטה חדשה.
+            כל יום ראשון הוא החלטה חדשה.
             <br />
             אני רוצה לרדת במשקל.
             <br />

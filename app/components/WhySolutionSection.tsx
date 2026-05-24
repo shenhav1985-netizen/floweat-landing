@@ -166,9 +166,16 @@ export default function WhySolutionSection() {
             fontWeight: 700,
             color: 'var(--text-dark)',
             lineHeight: 1.7,
+            marginBottom: 12,
           }}>
             ביחד. לא אחד בלי השני.
-            <br />
+          </p>
+          <p style={{
+            fontSize: 'clamp(1rem, 2.3vw, 1.15rem)',
+            fontWeight: 700,
+            color: 'var(--copper)',
+            lineHeight: 1.7,
+          }}>
             כי רק ביחד זה מחזיק.
           </p>
         </motion.div>
