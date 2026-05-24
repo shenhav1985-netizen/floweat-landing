@@ -56,9 +56,23 @@ export default function WhySolutionSection() {
             color: 'var(--text-medium)',
             lineHeight: 2,
           }}>
-            וכל עוד לא מתייחסים לזה, השינוי לא מחזיק.
-            <br />
-            לא כי את חלשה. כי השיטה לא נגעה בשורש.
+            וכל עוד השיטה מזניחה אותך, השינוי לא יחזיק.
+          </p>
+          <p style={{
+            fontSize: 'clamp(0.97rem, 2.2vw, 1.1rem)',
+            color: 'var(--text-medium)',
+            lineHeight: 2,
+            marginBottom: 4,
+          }}>
+            לא כי את חלשה.
+          </p>
+          <p style={{
+            fontSize: 'clamp(0.97rem, 2.2vw, 1.1rem)',
+            fontWeight: 700,
+            color: 'var(--text-dark)',
+            lineHeight: 2,
+          }}>
+            כי השיטה לא נגעה בשורש.
           </p>
         </motion.div>
 
