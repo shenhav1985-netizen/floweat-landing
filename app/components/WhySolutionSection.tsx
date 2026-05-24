@@ -158,7 +158,7 @@ export default function WhySolutionSection() {
           }}>
             <strong style={{ color: 'var(--text-dark)' }}>שחרור הדפוסים שמחזירים אותך אחורה.</strong>
             <br />
-            צלילה לתוך המאבק השקט סביב האוכל ואיך נוכל לעבוד איתו.
+            מזהות מה גורם לך לחזור אחורה ומנטרלות את הדפוס.
           </p>
 
           <p style={{
