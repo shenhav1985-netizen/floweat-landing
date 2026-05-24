@@ -184,10 +184,10 @@ export default function HeroSection() {
             fontWeight: 900,
             marginBottom: 14,
           }}>
-            12 שבועות שמנתקים את התלות באוכל מהשורש
+            לשחרר משקל, להרגיש טוב ולהראות טוב
             <br />
             <span style={{ color: 'var(--copper)', fontWeight: 700 }}>
-              אנחנו יוצאות מהלופ של דיאטות
+              בלי מאבק ובלי לחזור אחורה
             </span>
           </motion.h1>
 
