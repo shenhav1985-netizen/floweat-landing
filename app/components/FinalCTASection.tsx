@@ -141,23 +141,15 @@ export default function FinalCTASection() {
             textAlign: 'center',
           }}
         >
-          {/* Early bird badge */}
-          <div style={{
-            display: 'inline-block',
-            background: 'linear-gradient(135deg, var(--copper-light), var(--copper-dark))',
-            color: '#fff',
-            fontSize: 'clamp(1rem, 2.5vw, 1.3rem)',
-            fontWeight: 800,
-            letterSpacing: '0.08em',
-            padding: '8px 24px',
-            borderRadius: 9999,
-            marginBottom: 16,
-          }}>
-            מחיר השקה
-          </div>
-
           {/* Price */}
           <div style={{ marginBottom: 16 }}>
+            <p style={{
+              fontSize: 'clamp(0.95rem, 2.1vw, 1.05rem)',
+              color: 'var(--text-medium)',
+              marginBottom: 10,
+            }}>
+              על כל הטוב הזה את משלמת
+            </p>
             <span style={{
               fontSize: 'clamp(1.1rem, 2.5vw, 1.4rem)',
               fontWeight: 700,
