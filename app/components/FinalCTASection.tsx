@@ -157,19 +157,17 @@ export default function FinalCTASection() {
           </div>
 
           {/* Price */}
-          <div style={{ marginBottom: 12 }}>
+          <div style={{ marginBottom: 16 }}>
             <span style={{
               fontSize: 'clamp(1.1rem, 2.5vw, 1.4rem)',
               fontWeight: 700,
               color: 'var(--text-dark)',
               lineHeight: 1,
             }}>3,000 ₪</span>
+            <span style={{ fontSize: '0.95rem', color: 'var(--text-medium)', marginRight: 8 }}>
+              {' '}או <strong style={{ color: 'var(--text-dark)' }}>300 × 10</strong> תשלומים
+            </span>
           </div>
-
-          {/* Installments */}
-          <p style={{ fontSize: '0.95rem', color: 'var(--text-medium)', marginBottom: 16 }}>
-            או <strong style={{ color: 'var(--text-dark)' }}>300 ₪ × 10</strong> תשלומים
-          </p>
 
           {/* Urgency */}
           <div style={{
