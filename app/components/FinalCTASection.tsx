@@ -163,12 +163,12 @@ export default function FinalCTASection() {
               fontWeight: 700,
               color: 'var(--text-dark)',
               lineHeight: 1,
-            }}>2,500 ₪</span>
+            }}>3,000 ₪</span>
           </div>
 
           {/* Installments */}
           <p style={{ fontSize: '0.95rem', color: 'var(--text-medium)', marginBottom: 16 }}>
-            או <strong style={{ color: 'var(--text-dark)' }}>250 ₪ × 10</strong> תשלומים
+            או <strong style={{ color: 'var(--text-dark)' }}>300 ₪ × 10</strong> תשלומים
           </p>
 
           {/* Urgency */}
@@ -183,8 +183,6 @@ export default function FinalCTASection() {
             marginBottom: 20,
           }}>
             התוכנית מתחילה ב-16.6
-            <br />
-            החל מ-7.6 המחיר עולה ל-3,000 ₪ (300 × 10)
           </div>
 
           {/* Payment button */}
