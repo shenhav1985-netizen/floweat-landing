@@ -2,6 +2,7 @@ import dynamic from 'next/dynamic';
 import HeroSection from './components/HeroSection';
 import StickyWhatsApp from './components/StickyWhatsApp';
 
+const ProgramHighlightsSection = dynamic(() => import('./components/ProgramHighlightsSection'));
 const PainStorySection    = dynamic(() => import('./components/PainStorySection'));
 const WhySolutionSection  = dynamic(() => import('./components/WhySolutionSection'));
 const ProgramDetailsSection = dynamic(() => import('./components/ProgramDetailsSection'));
@@ -16,6 +17,7 @@ export default function Home() {
   return (
     <main>
       <HeroSection />
+      <ProgramHighlightsSection />
       <PainStorySection />
       <WhySolutionSection />
       <ProgramDetailsSection />

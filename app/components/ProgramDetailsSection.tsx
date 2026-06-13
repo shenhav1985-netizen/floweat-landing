@@ -4,34 +4,64 @@ import { motion } from 'framer-motion';
 
 const weeks = [
   {
-    label: 'שבועות 1-2',
-    title: 'מווסתות את הגוף',
-    body: 'מחזירות את הגוף לאיזון הטבעי שלו. שחרור משקל ראשוני, תוך כדי היכרות ראשונית עם מערכת ההפעלה הנוכחית שלך.',
+    num: '01',
+    title: 'תיאום ציפיות והכנה תזונתית',
+    body: 'אלווה אותך צעד-צעד איך להתכונן ולאכול נכון כדי לאזן את הגוף ולפתוח בשחרור משקל כבר מהשבוע הראשון. ביחד נתחיל להכיר את המנגנון הרגשי שמניע את הקשר שלך עם אוכל.',
   },
   {
-    label: 'שבועות 3-4',
-    title: 'מכירות את הגוף שלנו מבפנים',
-    body: 'מעשירות את הידע על גוף האישה ומבינות איך כל שלב במחזוריות משפיעה עלינו. מתרגלות אחריות אישית על המנגנון הקיים.',
+    num: '02',
+    title: 'מתכוננות לסופי שבוע',
+    body: 'תלמדי איך להגיע לסוף שבוע מוכנה, מה לאכול ואיך שומרים על ההגה גם בימים שמחוץ לשגרה. נמשיך להעמיק יחד בתהליך הרגשי.',
   },
   {
-    label: 'שבועות 5-7',
-    title: 'מפתחות מסוגלות',
-    body: 'מתחזקות תזונה עשירה בלי להשתעבד למטבח. מפתחות מסוגלות, כלים לאיפוק, שיטות לניהול דחפים ובניית סמכות פנימית.',
+    num: '03',
+    title: 'תזונה נשית ומחזוריות',
+    body: 'נלמד יחד כיצד כל שלב במחזור הנשי משפיע על התיאבון, האנרגיה והאכילה, ואיך לאכול בהתאם. עוד שכבה של התהליך הרגשי.',
   },
   {
-    label: 'שבועות 8-9',
-    title: 'עובדות עם הצרכים האמיתיים',
-    body: 'מכירות את 7 הצרכים האותנטיים שלך. לומדות לזהות אותם ולמלא אותם, בלי לברוח לאוכל.',
+    num: '04',
+    title: 'אחריות אישית ומנגנון הגוף',
+    body: 'ממשיכות לבנות הבנה עמוקה של הקשר בין גוף ונפש. מתרגלות אחריות אישית על המנגנון הקיים ומפתחות יחס חדש לגוף שלנו.',
   },
   {
-    label: 'מפגש 10',
+    num: '05',
+    title: 'בניית מסוגלות ואיפוק',
+    body: 'מתחזקות תזונה עשירה בלי להשתעבד למטבח. מפתחות כלים פרקטיים לניהול דחפים ולעמידה מול "מה-כבר-יהיה" בימים מאתגרים.',
+  },
+  {
+    num: '06',
+    title: 'סמכות פנימית ועצמאות',
+    body: 'בונות סמכות פנימית אמיתית. לא כוח רצון לחוץ, אלא בחירה שבאה מתוך הכרה עמוקה בעצמנו ובמה שאנחנו רוצות.',
+  },
+  {
+    num: '07',
+    title: 'אכילה בחוץ, חגים ואירועים',
+    body: 'מנהלות את האכילה מחוץ לבית בלי סטרס. מסעדות, חגים, אירועים משפחתיים, נלמד להיות נוכחות ולהנות בלי לפרוק את כל מה שבנינו.',
+  },
+  {
+    num: '08',
+    title: 'מכירות את 7 הצרכים האמיתיים',
+    body: 'נכיר את 7 הצרכים האותנטיים שגורמים לנו לפנות לאוכל. הצעד הראשון הוא לזהות אותם, וזה משנה הכל.',
+  },
+  {
+    num: '09',
+    title: 'עובדות עם הצרכים',
+    body: 'לומדות למלא את הצרכים האמיתיים בלי לברוח לאוכל. כלים ספציפיים לכל צורך, בפרקטיקה יומיומית.',
+  },
+  {
+    num: '10',
     title: 'יוצרות עצמאות',
-    body: 'בונות תוכנית אישית לניהול עצמי שתחזיק גם אחרי שהתוכנית נגמרת. המטרה שלנו לא לחזור אחורה.',
+    body: 'בונות תוכנית אישית לניהול עצמי שתחזיק גם אחרי שהתוכנית נגמרת. כי המטרה שלי היא שלא תצטרכי אותי לנצח.',
   },
   {
-    label: 'מפגשים 11-12',
+    num: '11',
+    title: 'חיבור לערכים ולחזון',
+    body: 'מתחברות לערכים האמיתיים ולתמונה שאנחנו רוצות ליצור לעצמנו. מכאן מגיע הכוח שמחזיק לטווח ארוך.',
+  },
+  {
+    num: '12',
     title: 'מחזקות את הגרסה החדשה',
-    body: 'מתחברות לערכים ולתמונה העתידית. את יוצאת מהתוכנית יציבה וחזקה, אוכלת מתוך בחירה ולא מתוך מאבק.',
+    body: 'את יוצאת מהתוכנית יציבה וחזקה. אוכלת מתוך בחירה, לא מתוך מאבק. זו הגרסה שתישאר.',
   },
 ];
 
@@ -80,11 +110,11 @@ export default function ProgramDetailsSection() {
           textAlign: 'center',
           marginBottom: 48,
         }}>
-          תוכנית ליווי דיגיטלית.
+          12 שבועות של תהליך מובנה.
           <br />
-          מעקב יומי באפליקציה, הקלטות, תרגולים, הטמעות ומפגשי זום.
+          <strong style={{ color: 'var(--text-dark)' }}>כל שבוע יש לך הקלטות, תרגולים, מעקב יומי באפליקציה וליווי צמוד שלי.</strong>
           <br />
-          <strong style={{ color: 'var(--text-dark)' }}>12 שבועות. ליווי מלא שלי לכל אורך הדרך.</strong>
+          בלי להשאיר אותך לבד עם שאלות.
         </motion.p>
 
         {/* Divider */}
@@ -98,38 +128,46 @@ export default function ProgramDetailsSection() {
         />
 
         {/* Week cards */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 20, marginBottom: 48 }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 16, marginBottom: 48 }}>
           {weeks.map((w, i) => (
             <motion.div
               key={i}
-              {...fadeUp(0.25 + i * 0.08)}
+              {...fadeUp(0.25 + i * 0.06)}
               style={{
                 background: '#FFFFFF',
-                border: '1.5px solid rgba(196,112,74,0.2)',
-                borderRadius: 16,
-                padding: '24px 24px',
+                border: '1.5px solid rgba(196,112,74,0.15)',
+                borderRadius: 18,
+                padding: '22px 24px',
                 direction: 'rtl',
                 display: 'grid',
                 gridTemplateColumns: 'auto 1fr',
                 gap: '0 20px',
                 alignItems: 'start',
+                boxShadow: '0 2px 16px rgba(28,16,8,0.05)',
+                transition: 'box-shadow 0.2s, border-color 0.2s',
               }}
             >
-              {/* Label */}
+              {/* Number circle */}
               <div style={{
-                background: 'rgba(196,112,74,0.1)',
-                border: '1px solid rgba(196,112,74,0.25)',
-                borderRadius: 8,
-                padding: '6px 14px',
-                fontSize: 11,
-                fontWeight: 700,
-                color: 'var(--copper-dark)',
-                letterSpacing: '0.06em',
-                whiteSpace: 'nowrap',
-                alignSelf: 'start',
+                width: 44, height: 44,
+                borderRadius: '50%',
+                background: 'linear-gradient(135deg, rgba(196,112,74,0.12) 0%, rgba(196,112,74,0.06) 100%)',
+                border: '1.5px solid rgba(196,112,74,0.3)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                flexShrink: 0,
                 marginTop: 2,
               }}>
-                {w.label}
+                <span style={{
+                  fontSize: 12,
+                  fontWeight: 900,
+                  color: 'var(--copper-dark)',
+                  letterSpacing: '0.04em',
+                  lineHeight: 1,
+                }}>
+                  {w.num}
+                </span>
               </div>
 
               {/* Content */}
@@ -138,15 +176,15 @@ export default function ProgramDetailsSection() {
                   fontSize: 'clamp(0.97rem, 2.2vw, 1.05rem)',
                   fontWeight: 800,
                   color: 'var(--text-dark)',
-                  marginBottom: 8,
+                  marginBottom: 6,
                   lineHeight: 1.4,
                 }}>
                   {w.title}
                 </p>
                 <p style={{
-                  fontSize: 'clamp(0.88rem, 1.9vw, 0.97rem)',
+                  fontSize: 'clamp(0.88rem, 1.9vw, 0.95rem)',
                   color: 'var(--text-medium)',
-                  lineHeight: 1.8,
+                  lineHeight: 1.85,
                 }}>
                   {w.body}
                 </p>
