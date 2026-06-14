@@ -4,42 +4,42 @@ import { motion } from 'framer-motion';
 
 const weeks = [
   {
-    num: '01',
+    num: 'שבוע ראשון',
     title: 'היכרות ותיאום ציפיות',
     body: 'פותחות נכון. תכירי את התוכנית שלב אחר שלב, תתכונני מנטלית לשבועיים הראשונים, ותתחילי להכיר את המנגנון הרגשי שמכתיב את הקשר שלך עם אוכל.',
   },
   {
-    num: '02',
+    num: 'שבוע שני',
     title: 'עקרונות האכילה ומנגנון הגוף',
     body: 'לומדות איך הגוף עובד באמת. איך לווסת, לאזן ולתת לו תנאים אופטימליים לשחרור משקל, ובמקביל חושפות את השיח הפנימי ואת ההדקות שמניעים את האכילה.',
   },
   {
-    num: '03',
+    num: 'שבוע שלישי',
     title: 'תזונה נשית ומחזוריות',
     body: 'הגוף שלך לא קשה, הוא פשוט נשי. לומדות לאכול לפי המחזוריות שלנו, חושפות את הטריגרים הרגשיים ומבינות את שפת המנגנון הפנימי.',
   },
   {
-    num: '4-5',
+    num: 'שבועות 4-5',
     title: 'עקביות גם כשהמוטיבציה נגמרת',
     body: 'כאן רוב הנשים נשברות. לא את. שיטות ייחודיות להתמיד, לא להישבר, ולמצוא את הכוח מבפנים, לא מהחוץ.',
   },
   {
-    num: '6-7',
+    num: 'שבועות 6-7',
     title: 'חיזוק, שריפת שומן ו-7 הצרכים',
     body: 'כלים לשריפת שומן עקשן, סיבים שמנקים רעלים, מתכונים מתוקים ומדהימים שנכנסים לחיים. ובמקביל: היכרות עם 7 הצרכים האותנטיים שלך עם תרגילי זיהוי ומילוי, בלי לברוח לאוכל.',
   },
   {
-    num: '08',
+    num: 'שבוע שמיני',
     title: 'מעבר לעצמאות',
     body: 'בונות תוכנית אישית שתחזיק גם אחרי שהתוכנית נגמרת. כי המטרה שלי היא שלא תצטרכי אותי לנצח.',
   },
   {
-    num: '09',
+    num: 'שבוע תשיעי',
     title: 'חיזוק הזהות המשוחררת',
     body: 'מגבשות ומחזקות. האישה שאת הופכת להיות מקבלת שם, פנים ושורשים עמוקים.',
   },
   {
-    num: '10',
+    num: 'שבוע עשירי',
     title: 'סגירה, הטמעה וחוזה חירות',
     body: 'מסכמות את המסע, מכירות בנקודת השינוי, וכותבות את "חוזה החירות" שלך, ההסכם עם עצמך לחיים חדשים.',
   },
@@ -79,7 +79,7 @@ export default function ProgramDetailsSection() {
           marginBottom: 16,
           textAlign: 'center',
         }}>
-          אני רוצה שתדעי בדיוק למה את נכנסת
+          כך תיראה התוכנית
         </motion.h2>
 
         {/* Format */}
@@ -127,27 +127,22 @@ export default function ProgramDetailsSection() {
                 transition: 'box-shadow 0.2s, border-color 0.2s',
               }}
             >
-              {/* Number circle */}
+              {/* Week badge */}
               <div style={{
-                width: 44, height: 44,
-                borderRadius: '50%',
-                background: 'linear-gradient(135deg, rgba(196,112,74,0.12) 0%, rgba(196,112,74,0.06) 100%)',
-                border: '1.5px solid rgba(196,112,74,0.3)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
+                background: 'rgba(196,112,74,0.1)',
+                border: '1px solid rgba(196,112,74,0.28)',
+                borderRadius: 8,
+                padding: '5px 12px',
+                fontSize: 11,
+                fontWeight: 700,
+                color: 'var(--copper-dark)',
+                letterSpacing: '0.04em',
+                whiteSpace: 'nowrap',
                 flexShrink: 0,
-                marginTop: 2,
+                alignSelf: 'start',
+                marginTop: 3,
               }}>
-                <span style={{
-                  fontSize: 12,
-                  fontWeight: 900,
-                  color: 'var(--copper-dark)',
-                  letterSpacing: '0.04em',
-                  lineHeight: 1,
-                }}>
-                  {w.num}
-                </span>
+                {w.num}
               </div>
 
               {/* Content */}
