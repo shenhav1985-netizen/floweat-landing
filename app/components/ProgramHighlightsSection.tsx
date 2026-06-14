@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 
 const highlights = [
   {
-    title: 'ליווי אישי צמוד שלי',
-    desc: 'אני כאן איתך לאורך כל הדרך. נוכחת, זמינה ומלווה כל צעד מהרגע הראשון ועד האחרון.',
+    title: 'ליווי ומעקב צמוד שלי',
+    desc: 'אני כאן איתך לאורך כל הדרך. נוכחת, זמינה ועוקבת אחרי ההתקדמות שלך כל שבוע.',
     icon: (
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
@@ -16,12 +16,11 @@ const highlights = [
     ),
   },
   {
-    title: 'הדרכות מפורטות שבועיות',
-    desc: 'תכנים ברורים ומובנים שמובילים אותך צעד אחר צעד, בלי לאבד את הדרך.',
+    title: 'מענה על שאלות',
+    desc: 'שאלה קטנה שלא תתני לה תשובה יכולה לעצור הכל. אני כאן לענות, תמיד.',
     icon: (
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 20h9"/>
-        <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
       </svg>
     ),
   },
@@ -36,33 +35,33 @@ const highlights = [
     ),
   },
   {
+    title: 'מתכונים נגישים',
+    desc: 'מתכונים שהם טעימים, בריאים ומהירים להכנה. בלי להשתעבד למטבח.',
+    icon: (
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/>
+        <path d="M7 2v20"/>
+        <path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/>
+      </svg>
+    ),
+  },
+  {
+    title: 'מפגשי זום שבועיים',
+    desc: 'מפגשים חיים, בזמן אמת, שבהם מעמיקות, שואלות ומתחזקות ביחד.',
+    icon: (
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <polygon points="23 7 16 12 23 17 23 7"/>
+        <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+      </svg>
+    ),
+  },
+  {
     title: 'אפליקציה מסודרת',
     desc: 'כל כלי, כל תוכן וכל מעקב במקום אחד. נגיש תמיד, ברור תמיד.',
     icon: (
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
         <line x1="12" y1="18" x2="12.01" y2="18" strokeWidth="2.5"/>
-      </svg>
-    ),
-  },
-  {
-    title: 'יומן התקדמות',
-    desc: 'תראי בעצמך כמה רחוק הגעת. כל שינוי קטן נספר, נשמר ומחזק אותך.',
-    icon: (
-      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-        <polyline points="14 2 14 8 20 8"/>
-        <line x1="16" y1="13" x2="8" y2="13"/>
-        <line x1="16" y1="17" x2="8" y2="17"/>
-      </svg>
-    ),
-  },
-  {
-    title: 'צעדים ברורים והדרגתיים',
-    desc: 'כל שבוע שלב אחד. אין כאן "הכל או כלום". יש תהליך שבנוי נכון ועובד.',
-    icon: (
-      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M3 20h4v-4h4v-4h4v-4h4V4"/>
       </svg>
     ),
   },
@@ -78,24 +77,17 @@ const fadeUp = (delay = 0) => ({
 export default function ProgramHighlightsSection() {
   return (
     <section style={{
-      background: 'linear-gradient(160deg, #2A1208 0%, #3A1E0C 50%, #2E1510 100%)',
+      background: '#FFFFFF',
       padding: '96px 24px',
       position: 'relative',
       overflow: 'hidden',
     }}>
-      {/* Subtle glow top */}
+      {/* Top border line */}
       <div style={{
         position: 'absolute', top: 0, left: '50%',
         transform: 'translateX(-50%)',
         width: '70%', height: 1,
-        background: 'linear-gradient(90deg, transparent, rgba(196,112,74,0.5), transparent)',
-      }} />
-      {/* Radial glow */}
-      <div style={{
-        position: 'absolute', top: '-10%', right: '-5%',
-        width: '40vw', height: '40vw', maxWidth: 420, maxHeight: 420,
-        background: 'radial-gradient(ellipse, rgba(196,112,74,0.07) 0%, transparent 65%)',
-        pointerEvents: 'none',
+        background: 'linear-gradient(90deg, transparent, rgba(196,112,74,0.3), transparent)',
       }} />
 
       <div style={{ maxWidth: 960, margin: '0 auto', position: 'relative' }}>
@@ -106,7 +98,7 @@ export default function ProgramHighlightsSection() {
           fontWeight: 600,
           letterSpacing: '0.28em',
           textTransform: 'uppercase',
-          color: 'var(--copper-light)',
+          color: 'var(--copper)',
           marginBottom: 16,
           textAlign: 'center',
         }}>
@@ -117,7 +109,7 @@ export default function ProgramHighlightsSection() {
         <motion.h2 {...fadeUp(0.1)} style={{
           fontSize: 'clamp(1.7rem, 4vw, 2.4rem)',
           fontWeight: 900,
-          color: '#F5EDE4',
+          color: 'var(--text-dark)',
           lineHeight: 1.3,
           marginBottom: 16,
           textAlign: 'center',
@@ -127,14 +119,13 @@ export default function ProgramHighlightsSection() {
 
         <motion.p {...fadeUp(0.18)} style={{
           fontSize: 'clamp(0.97rem, 2.1vw, 1.1rem)',
-          color: 'rgba(245,237,228,0.65)',
+          color: 'var(--text-medium)',
           lineHeight: 1.85,
           textAlign: 'center',
-          marginBottom: 56,
           maxWidth: 540,
           margin: '0 auto 56px',
         }}>
-          זה לא קורס שמורידים ושוכחים. זה תהליך שנבנה צעד אחר צעד, עם כל הכלים שאת צריכה, ועם נוכחות שלי לכל אורך הדרך.
+          זה לא קורס שמורידים ושוכחים. זה תהליך שנבנה צעד אחר צעד, עם כל הכלים שאת צריכה ועם נוכחות שלי לכל אורך הדרך.
         </motion.p>
 
         {/* Grid */}
@@ -148,28 +139,28 @@ export default function ProgramHighlightsSection() {
               key={i}
               {...fadeUp(0.28 + i * 0.07)}
               style={{
-                background: 'rgba(255,255,255,0.04)',
-                border: '1px solid rgba(196,112,74,0.22)',
+                background: 'var(--bg-light)',
+                border: '1.5px solid rgba(196,112,74,0.18)',
                 borderRadius: 20,
                 padding: '28px 24px',
                 direction: 'rtl',
-                transition: 'border-color 0.2s, background 0.2s',
+                boxShadow: '0 2px 16px rgba(28,16,8,0.05)',
               }}
               whileHover={{
-                borderColor: 'rgba(196,112,74,0.5)',
-                background: 'rgba(196,112,74,0.06)',
+                borderColor: 'rgba(196,112,74,0.45)',
+                boxShadow: '0 6px 24px rgba(196,112,74,0.12)',
               }}
             >
               {/* Icon circle */}
               <div style={{
                 width: 52, height: 52,
                 borderRadius: '50%',
-                background: 'rgba(196,112,74,0.12)',
-                border: '1px solid rgba(196,112,74,0.3)',
+                background: 'rgba(196,112,74,0.1)',
+                border: '1.5px solid rgba(196,112,74,0.25)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                color: 'var(--copper-light)',
+                color: 'var(--copper)',
                 marginBottom: 18,
               }}>
                 {h.icon}
@@ -178,15 +169,15 @@ export default function ProgramHighlightsSection() {
               <p style={{
                 fontSize: '1.02rem',
                 fontWeight: 800,
-                color: '#F5EDE4',
-                marginBottom: 10,
+                color: 'var(--text-dark)',
+                marginBottom: 8,
                 lineHeight: 1.4,
               }}>
                 {h.title}
               </p>
               <p style={{
                 fontSize: '0.9rem',
-                color: 'rgba(245,237,228,0.6)',
+                color: 'var(--text-medium)',
                 lineHeight: 1.85,
               }}>
                 {h.desc}
@@ -197,12 +188,12 @@ export default function ProgramHighlightsSection() {
 
       </div>
 
-      {/* Subtle glow bottom */}
+      {/* Bottom border line */}
       <div style={{
         position: 'absolute', bottom: 0, left: '50%',
         transform: 'translateX(-50%)',
         width: '70%', height: 1,
-        background: 'linear-gradient(90deg, transparent, rgba(196,112,74,0.4), transparent)',
+        background: 'linear-gradient(90deg, transparent, rgba(196,112,74,0.25), transparent)',
       }} />
     </section>
   );
