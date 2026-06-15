@@ -1,6 +1,7 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
+import initialContent from '../../data/site-content.json';
 
 const IMAGES = [
   { key: 'hero',      label: 'תמונה ראשית (הירו)',          path: '/images/hero.jpg',           accept: 'image/*' },
@@ -168,6 +169,123 @@ function VideoCard({ item }: { item: typeof VIDEOS[0] }) {
         {status === 'uploading' ? '⏳ מעלה...' : status === 'done' ? '✓ הוחלף' : 'החלף סרטון'}
       </button>
       {msg && <p style={{ fontSize: 13, color: status === 'error' ? '#c62828' : '#2e7d32', textAlign: 'center' }}>{msg}</p>}
+    </div>
+  );
+}
+
+function ContentEditor({ adminPassword }: { adminPassword: string }) {
+  const [content, setContent] = useState(initialContent);
+  const [status, setStatus] = useState<'idle' | 'saving' | 'done' | 'error'>('idle');
+  const [msg, setMsg] = useState('');
+
+  const updateWeek = (i: number, field: 'title' | 'body', val: string) => {
+    setContent(prev => {
+      const weeks = [...prev.weeks];
+      weeks[i] = { ...weeks[i], [field]: val };
+      return { ...prev, weeks };
+    });
+  };
+
+  const updateHighlight = (i: number, field: 'title' | 'desc', val: string) => {
+    setContent(prev => {
+      const highlights = [...prev.highlights];
+      highlights[i] = { ...highlights[i], [field]: val };
+      return { ...prev, highlights };
+    });
+  };
+
+  const save = async () => {
+    setStatus('saving');
+    setMsg('');
+    const res = await fetch('/api/github-save', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ content, adminPassword }),
+    });
+    const data = await res.json();
+    if (res.ok) {
+      setStatus('done');
+      setMsg('נשמר בהצלחה. הדף יתעדכן תוך 2-3 דקות.');
+    } else {
+      setStatus('error');
+      setMsg(data.error ?? 'שגיאה בשמירה');
+    }
+  };
+
+  const inp: React.CSSProperties = {
+    width: '100%', padding: '10px 14px', borderRadius: 10,
+    border: '1.5px solid #e8ddd4', fontFamily: 'Heebo, sans-serif',
+    fontSize: 14, direction: 'rtl', outline: 'none', background: '#faf8f5',
+    resize: 'vertical' as const,
+  };
+
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>
+
+      {/* Weeks */}
+      <div>
+        <h3 style={{ fontSize: 17, fontWeight: 800, color: '#3D2B1F', marginBottom: 20 }}>שבועות התוכנית</h3>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+          {content.weeks.map((w, i) => (
+            <div key={i} style={{ background: '#faf8f5', borderRadius: 14, padding: 18, border: '1px solid #e8ddd4' }}>
+              <p style={{ fontSize: 12, fontWeight: 700, color: '#B8906A', marginBottom: 10, letterSpacing: '0.05em' }}>{w.num}</p>
+              <input
+                value={w.title}
+                onChange={e => updateWeek(i, 'title', e.target.value)}
+                style={{ ...inp, fontWeight: 700, marginBottom: 10 }}
+                placeholder="כותרת"
+              />
+              <textarea
+                value={w.body}
+                onChange={e => updateWeek(i, 'body', e.target.value)}
+                style={{ ...inp, minHeight: 80 }}
+                placeholder="תיאור"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Highlights */}
+      <div>
+        <h3 style={{ fontSize: 17, fontWeight: 800, color: '#3D2B1F', marginBottom: 20 }}>מה כלול בתוכנית (6 כרטיסיות)</h3>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+          {content.highlights.map((h, i) => (
+            <div key={i} style={{ background: '#faf8f5', borderRadius: 14, padding: 18, border: '1px solid #e8ddd4' }}>
+              <input
+                value={h.title}
+                onChange={e => updateHighlight(i, 'title', e.target.value)}
+                style={{ ...inp, fontWeight: 700, marginBottom: 10 }}
+                placeholder="כותרת"
+              />
+              <textarea
+                value={h.desc}
+                onChange={e => updateHighlight(i, 'desc', e.target.value)}
+                style={{ ...inp, minHeight: 70 }}
+                placeholder="תיאור"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <button
+        onClick={save}
+        disabled={status === 'saving'}
+        style={{
+          background: status === 'done' ? '#2e7d32' : status === 'error' ? '#c62828' : '#3D2B1F',
+          color: '#fff', border: 'none', borderRadius: 12,
+          padding: '14px 0', fontWeight: 700, fontSize: 16,
+          cursor: 'pointer', fontFamily: 'Heebo, sans-serif',
+        }}
+      >
+        {status === 'saving' ? 'שומרת...' : status === 'done' ? 'נשמר!' : 'שמרי שינויים'}
+      </button>
+      {msg && (
+        <p style={{ textAlign: 'center', fontSize: 14, color: status === 'error' ? '#c62828' : '#2e7d32' }}>
+          {msg}
+        </p>
+      )}
     </div>
   );
 }
@@ -421,6 +539,23 @@ export default function AdminPage() {
               <VideoCard key={item.key} item={item} />
             ))}
           </div>
+        </div>
+
+        {/* Content Editor */}
+        <div style={{
+          background: '#fff',
+          borderRadius: 20,
+          padding: 28,
+          border: '1.5px solid #e8ddd4',
+          marginBottom: 28,
+        }}>
+          <h2 style={{ fontSize: 20, fontWeight: 700, color: '#3D2B1F', marginBottom: 8, borderBottom: '1px solid #f0e8df', paddingBottom: 12 }}>
+            ✏️ עריכת תוכן הדף
+          </h2>
+          <p style={{ fontSize: 13, color: '#9A8070', marginBottom: 24 }}>
+            ערכי את הטקסטים ולחצי שמרי. הדף יתעדכן תוך 2-3 דקות.
+          </p>
+          <ContentEditor adminPassword={enteredPass} />
         </div>
 
         {/* Settings */}

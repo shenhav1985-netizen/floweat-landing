@@ -1,11 +1,13 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import siteContent from '../../data/site-content.json';
+
+const highlightTexts = siteContent.highlights;
 
 const highlights = [
   {
-    title: 'ליווי, מעקב ומענה על שאלות',
-    desc: 'אני כאן איתך לאורך כל הדרך. נוכחת, זמינה, עוקבת אחרי ההתקדמות שלך ועונה על כל שאלה שעולה.',
+    ...highlightTexts[0],
     icon: (
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
@@ -16,8 +18,7 @@ const highlights = [
     ),
   },
   {
-    title: 'הקלטות יומיות',
-    desc: 'תכנים קצרים שאת שומעת בקצב שלך, בכל שעה שמתאימה לך. פעם ושתיים אם צריך.',
+    ...highlightTexts[1],
     icon: (
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="10"/>
@@ -26,8 +27,7 @@ const highlights = [
     ),
   },
   {
-    title: 'מתכונים נגישים',
-    desc: 'מתכונים שהם טעימים, בריאים ומהירים להכנה. בלי להשתעבד למטבח.',
+    ...highlightTexts[2],
     icon: (
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/>
@@ -37,8 +37,7 @@ const highlights = [
     ),
   },
   {
-    title: 'מפגשי זום שבועיים',
-    desc: 'מפגשים חיים, בזמן אמת, שבהם מעמיקות, שואלות ומתחזקות ביחד.',
+    ...highlightTexts[3],
     icon: (
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <polygon points="23 7 16 12 23 17 23 7"/>
@@ -47,8 +46,7 @@ const highlights = [
     ),
   },
   {
-    title: 'אפליקציה מסודרת',
-    desc: 'כל כלי, כל תוכן וכל מעקב במקום אחד. נגיש תמיד, ברור תמיד.',
+    ...highlightTexts[4],
     icon: (
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
@@ -57,8 +55,7 @@ const highlights = [
     ),
   },
   {
-    title: 'תרגילים שבועיים משני חיים',
-    desc: 'תרגילים קצרים ופרקטיים שמשנים את הדרך שבה את חושבת, מרגישה ואוכלת. לא תיאוריה, חיים.',
+    ...highlightTexts[5],
     icon: (
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <polyline points="9 11 12 14 22 4"/>
